@@ -1,15 +1,106 @@
-'use client'
+"use client";
 
-import styled from "styled-components"
+import SwiperSection from "@/components/SwiperSection";
+import styled from "styled-components";
 
-export default function MainSection(){
-    return(
-        <main>
-            <P>메인이다</P>
-        </main>
-    )
+export default function MainSection() {
+  return (
+    <main>
+      <P>메인이다</P>
+      <SwiperSection />
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+      <P>메인이다</P>
+    </main>
+  );
 }
 
 const P = styled.p`
-    color: red;
-`
+  color: red;
+`;

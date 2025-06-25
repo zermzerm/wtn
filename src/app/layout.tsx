@@ -5,8 +5,8 @@ import Nav from "@/components/NavBar";
 export const metadata: Metadata = {
   title: "WebToonNet",
   description: "WebToon Review Site",
-  icons:{
-    icon : './favicon.ico',
+  icons: {
+    icon: "./favicon.ico",
   },
 };
 
@@ -18,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <nav>
-          <Nav/>
-        </nav>
-        {children}
+        <Nav />
+        <div style={{ paddingTop: "80px" }}>{children}</div>
       </body>
     </html>
   );
