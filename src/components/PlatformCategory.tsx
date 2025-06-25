@@ -13,7 +13,7 @@ interface Webtoon {
   img: string;
 }
 
-export default function TopTen() {
+export default function PlatformCategory() {
   const [current, setCurrent] = useState<Webtoon[]>(reviewTop);
   const [selected, setSelected] = useState<"review" | "total">("review");
 
@@ -59,6 +59,9 @@ export default function TopTen() {
           </div>
         ))}
       </Container>
+      <MoreButton>
+        <MoreDiv>더보기</MoreDiv>
+      </MoreButton>
     </Main>
   );
 }
@@ -68,6 +71,24 @@ const Main = styled.main`
   flex-direction: column;
   gap: 20px;
   padding-top: 30px;
+`;
+
+const MoreButton = styled.a`
+  display: flex;
+  justify-content: center;
+`;
+
+const MoreDiv = styled.div`
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 12px 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #23d2e2;
+    color: #fff;
+  }
 `;
 
 const ClickDiv = styled.div<{ active: boolean }>`
