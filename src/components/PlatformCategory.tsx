@@ -13,9 +13,11 @@ interface Webtoon {
   img: string;
 }
 
+type Platform = "naver" | "kakao" | "lezhin" | "top";
+
 export default function PlatformCategory() {
   const [current, setCurrent] = useState<Webtoon[]>(reviewTop);
-  const [selected, setSelected] = useState<"review" | "total">("review");
+  const [selected, setSelected] = useState<Platform>("naver");
 
   return (
     <Main>
@@ -23,20 +25,38 @@ export default function PlatformCategory() {
         <ClickDiv
           onClick={() => {
             setCurrent(reviewTop);
-            setSelected("review");
+            setSelected("naver");
           }}
-          active={selected === "review"}
+          active={selected === "naver"}
         >
-          리뷰순
+          네이버
         </ClickDiv>
         <ClickDiv
           onClick={() => {
             setCurrent(totalTop);
-            setSelected("total");
+            setSelected("kakao");
           }}
-          active={selected === "total"}
+          active={selected === "kakao"}
         >
-          인기순
+          카카오
+        </ClickDiv>
+        <ClickDiv
+          onClick={() => {
+            setCurrent(totalTop);
+            setSelected("lezhin");
+          }}
+          active={selected === "lezhin"}
+        >
+          레진
+        </ClickDiv>
+        <ClickDiv
+          onClick={() => {
+            setCurrent(totalTop);
+            setSelected("top");
+          }}
+          active={selected === "top"}
+        >
+          탑툰
         </ClickDiv>
       </Nav>
       <Container>
