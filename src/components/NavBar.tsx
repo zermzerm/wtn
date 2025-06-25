@@ -53,7 +53,7 @@ const SearchSection = styled.section`
 
 const StyledLink = styled(Link)`
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
   color: inherit;
 

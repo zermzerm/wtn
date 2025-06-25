@@ -50,7 +50,7 @@ export default function TopTen() {
                 <div>{webtoon.genre}</div>
                 <div>{webtoon.author}</div>
               </Genre>
-              <div>{webtoon.title}</div>
+              <div style={{ fontSize: "15px" }}>{webtoon.title}</div>
               <Review>
                 <div>별 이미지</div>
                 <div>{`${webtoon.star} (${webtoon.review})`}</div>
@@ -106,10 +106,13 @@ const ContentWrapper = styled.div`
 const Genre = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
 `;
 
 const Review = styled.div`
   display: flex;
+  font-size: 12px;
+  color: #484848;
 `;
 
 const Nav = styled.nav`
