@@ -1,20 +1,20 @@
 "use client";
 
-import { swiperDummy } from "@/lib/dummyData";
+import {swiperDummy} from "@/lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Navigation} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useRef } from "react";
+import {useRef} from "react";
 
 export default function SwiperSection() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
   return (
-    <Container>
+    <Main>
       <Swiper
         modules={[Autoplay, Navigation]}
         loop={true}
@@ -34,7 +34,7 @@ export default function SwiperSection() {
             }
           });
         }}
-        style={{ width: "100%", height: "100%" }}
+        style={{width: "100%", height: "100%"}}
       >
         {swiperDummy.map((slide) => (
           <SwiperSlide key={slide.id}>
@@ -49,11 +49,11 @@ export default function SwiperSection() {
         <CustomButton ref={prevRef}>◀</CustomButton>
         <CustomButton ref={nextRef}>▶</CustomButton>
       </ButtonContainer>
-    </Container>
+    </Main>
   );
 }
 
-const Container = styled.div`
+const Main = styled.div`
   width: 100%;
   max-width: 1200px; // 원하는 최대 너비 설정
   margin: 0 auto;

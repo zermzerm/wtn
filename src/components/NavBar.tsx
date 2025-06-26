@@ -20,7 +20,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <Nav $hidden={isHidden}>
+    <Main $hidden={isHidden}>
       <Section>
         <StyledLink href="/">ㅇㅌㄴ</StyledLink>
         <StyledLink href="/ranking">랭킹</StyledLink>
@@ -33,7 +33,7 @@ export default function NavBar() {
         <p>검색</p>
         <p>로그인</p>
       </SearchSection>
-    </Nav>
+    </Main>
   );
 }
 
@@ -48,7 +48,7 @@ const slideDown = keyframes`
   }
 `;
 
-const Nav = styled.nav<{$hidden: boolean}>`
+const Main = styled.nav<{$hidden: boolean}>`
   background-color: white;
   width: 100%;
   height: 80px;
