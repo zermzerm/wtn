@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import "./globals.css";
 import Nav from "@/components/NavBar";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Nav />
-        <div style={{ paddingTop: "80px" }}>{children}</div>
+        <div style={{paddingTop: "80px"}}>{children}</div>
       </body>
     </html>
   );

@@ -1,11 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import styled from "styled-components";
+import {useEffect, useState} from "react";
+import styled, {css, keyframes} from "styled-components";
 
 export default function NavBar() {
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY === 0) {
+        // 맨 위로 올리면 다시 숨김
+        setIsHidden(false);
+      } else if (scrollY > 400) {
+        // 한 번 내려가면 나타나고 계속 유지
+        setIsHidden(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Nav>
+    <Nav $hidden={isHidden}>
       <Section>
         <StyledLink href="/">ㅇㅌㄴ</StyledLink>
         <StyledLink href="/ranking">랭킹</StyledLink>
@@ -22,7 +42,18 @@ export default function NavBar() {
   );
 }
 
-const Nav = styled.nav`
+const slideDown = keyframes`
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const Nav = styled.nav<{$hidden: boolean}>`
   background-color: white;
   width: 100%;
   height: 80px;
@@ -30,10 +61,17 @@ const Nav = styled.nav`
   justify-content: center;
   border-bottom: 1px solid #d8d6d6;
   gap: 250px;
-  position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
-  z-index: 1000;
+  position: ${({$hidden}) => ($hidden ? "fixed" : "absolute")};
+
+  ${({$hidden}) =>
+    $hidden &&
+    css`
+      animation: ${slideDown} 0.4s ease forwards;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    `}
 `;
 
 const Section = styled.section`
