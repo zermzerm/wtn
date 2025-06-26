@@ -11,13 +11,8 @@ export default function NavBar() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      if (scrollY === 0) {
-        // 맨 위로 올리면 다시 숨김
-        setIsHidden(false);
-      } else if (scrollY > 400) {
-        // 한 번 내려가면 나타나고 계속 유지
-        setIsHidden(true);
-      }
+      if (scrollY === 0) setIsHidden(false);
+      else if (scrollY > 400) setIsHidden(true);
     };
 
     window.addEventListener("scroll", handleScroll);
