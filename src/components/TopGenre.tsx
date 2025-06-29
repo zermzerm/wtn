@@ -1,20 +1,21 @@
 "use client";
 
+import Link from "next/link";
 import styled from "styled-components";
 
 export default function TopGenre() {
   return (
     <Main>
-      <Article>전체</Article>
-      <Article>로맨스</Article>
-      <Article>로판</Article>
-      <Article>판타지</Article>
-      <Article>협판</Article>
-      <Article>무협</Article>
-      <Article>드라마</Article>
-      <Article>라이트노벨</Article>
-      <Article>스포츠</Article>
-      <Article>개그</Article>
+      <Article href="/search">전체</Article>
+      <Article href="/search">로맨스</Article>
+      <Article href="/search">로판</Article>
+      <Article href="/search">판타지</Article>
+      <Article href="/search">협판</Article>
+      <Article href="/search">무협</Article>
+      <Article href="/search">드라마</Article>
+      <Article href="/search">라이트노벨</Article>
+      <Article href="/search">스포츠</Article>
+      <Article href="/search">개그</Article>
     </Main>
   );
 }
@@ -28,7 +29,7 @@ const Main = styled.main`
   padding: 10px 0 10px 0;
 `;
 
-const Article = styled.article`
+const Article = styled(Link)`
   padding: 6px 16px;
   border: 3px solid transparent;
   &:hover {
