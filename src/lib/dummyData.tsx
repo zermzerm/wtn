@@ -105,7 +105,7 @@ export const recentReview = [
   {
     id: 1,
     name: "장난꾸러기",
-    image: "/svg/profile.png",
+    img: "/svg/profile.png",
     star: 5,
     content:
       "두번 정주행한 작품. 정신 나간 주인공의 정신 나간 여정과 주변에 있는 정신 나간 놈들이 어우러져 정신 나간 작품이 탄생했다. 글이 참 맛깔난다.",
@@ -115,7 +115,7 @@ export const recentReview = [
   {
     id: 2,
     name: "장난꾸러기",
-    image: "/svg/profile.png",
+    img: "/svg/profile.png",
     star: 5,
     content:
       "두번 정주행한 작품. 정신 나간 주인공의 정신 나간 여정과 주변에 있는 정신 나간 놈들이 어우러져 정신 나간 작품이 탄생했다. 글이 참 맛깔난다.",
@@ -125,7 +125,7 @@ export const recentReview = [
   {
     id: 3,
     name: "장난꾸러기",
-    image: "/svg/profile.png",
+    img: "/svg/profile.png",
     star: 5,
     content:
       "두번 정주행한 작품. 정신 나간 주인공의 정신 나간 여정과 주변에 있는 정신 나간 놈들이 어우러져 정신 나간 작품이 탄생했다. 글이 참 맛깔난다.",
@@ -135,7 +135,7 @@ export const recentReview = [
   {
     id: 4,
     name: "장난꾸러기",
-    image: "/svg/profile.png",
+    img: "/svg/profile.png",
     star: 5,
     content:
       "두번 정주행한 작품. 정신 나간 주인공의 정신 나간 여정과 주변에 있는 정신 나간 놈들이 어우러져 정신 나간 작품이 탄생했다. 글이 참 맛깔난다.",
