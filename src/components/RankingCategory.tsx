@@ -25,7 +25,7 @@ export default function RankingCategory() {
             setCurrent(reviewTop);
             setSelected("review");
           }}
-          active={selected === "review"}
+          $active={selected === "review"}
         >
           리뷰순
         </ClickDiv>
@@ -34,7 +34,7 @@ export default function RankingCategory() {
             setCurrent(totalTop);
             setSelected("total");
           }}
-          active={selected === "total"}
+          $active={selected === "total"}
         >
           인기순
         </ClickDiv>
@@ -91,9 +91,9 @@ const MoreDiv = styled.div`
   }
 `;
 
-const ClickDiv = styled.div<{ active: boolean }>`
-  font-weight: ${({ active }) => (active ? "bold" : "normal")};
-  text-decoration: ${({ active }) => (active ? "underline" : "none")};
+const ClickDiv = styled.div<{ $active: boolean }>`
+  font-weight: ${({ $active }) => ($active ? "bold" : "normal")};
+  text-decoration: ${({ $active }) => ($active ? "underline" : "none")};
   text-underline-offset: 10px;
   text-decoration-color: #23d2e2;
   text-decoration-thickness: 3px;

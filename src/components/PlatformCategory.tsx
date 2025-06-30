@@ -27,7 +27,7 @@ export default function PlatformCategory() {
             setCurrent(reviewTop);
             setSelected("naver");
           }}
-          active={selected === "naver"}
+          $active={selected === "naver"}
         >
           네이버
         </ClickDiv>
@@ -36,7 +36,7 @@ export default function PlatformCategory() {
             setCurrent(totalTop);
             setSelected("kakao");
           }}
-          active={selected === "kakao"}
+          $active={selected === "kakao"}
         >
           카카오
         </ClickDiv>
@@ -45,7 +45,7 @@ export default function PlatformCategory() {
             setCurrent(totalTop);
             setSelected("lezhin");
           }}
-          active={selected === "lezhin"}
+          $active={selected === "lezhin"}
         >
           레진
         </ClickDiv>
@@ -54,7 +54,7 @@ export default function PlatformCategory() {
             setCurrent(totalTop);
             setSelected("top");
           }}
-          active={selected === "top"}
+          $active={selected === "top"}
         >
           탑툰
         </ClickDiv>
@@ -111,9 +111,9 @@ const MoreDiv = styled.div`
   }
 `;
 
-const ClickDiv = styled.div<{ active: boolean }>`
-  font-weight: ${({ active }) => (active ? "bold" : "normal")};
-  text-decoration: ${({ active }) => (active ? "underline" : "none")};
+const ClickDiv = styled.div<{ $active: boolean }>`
+  font-weight: ${({ $active }) => ($active ? "bold" : "normal")};
+  text-decoration: ${({ $active }) => ($active ? "underline" : "none")};
   text-underline-offset: 10px;
   text-decoration-color: #23d2e2;
   text-decoration-thickness: 3px;
