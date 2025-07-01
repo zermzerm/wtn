@@ -1,145 +1,149 @@
 "use client";
 
 import TopGenre from "@/components/TopGenre";
-import { totalWebToon } from "@/lib/dummyData";
+import { series } from "@/lib/dummyData";
 import Image from "next/image";
-import { useParams } from "next/navigation";
 import styled from "styled-components";
+// import { useParams } from "next/navigation";
 
-interface Webtoon {
-  id: number;
-  title: string;
-  genre: string;
-  author: string;
-  star: number;
-  review: number;
-  img: string;
-}
-
-export default function GenrePage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export default function Series() {
+  //   const params = useParams();
+  //   const slug = params.slug as string;
 
   return (
     <>
       <TopGenre />
       <Main>
-        <Header>
-          <div>{slug}</div>
-          <div>검색</div>
-        </Header>
-        <div>
-          <ContentHeader>
-            <div>완결 체크</div>
-            <ContentSort>
-              <div>최신순</div>
-              <div>인기순</div>
-              <div>추천순</div>
-              <div>리뷰순</div>
-            </ContentSort>
-          </ContentHeader>
-          <ContentSection>
-            <ContentWrapper>
-              {totalWebToon.map((webtoon: Webtoon) => (
-                <div key={webtoon.id}>
-                  <ImageWrapper>
-                    <Image
-                      src={webtoon.img}
-                      alt={webtoon.title}
-                      fill
-                      priority
-                    />
-                  </ImageWrapper>
-                  <Content>
-                    <Genre>
-                      <div>{webtoon.genre}</div>
-                      <div>{webtoon.author}</div>
-                    </Genre>
-                    <div style={{ fontSize: "15px" }}>{webtoon.title}</div>
-                    <Review>
-                      <div>별 이미지</div>
-                      <div>{`${webtoon.star} (${webtoon.review})`}</div>
-                    </Review>
-                  </Content>
-                </div>
-              ))}
-            </ContentWrapper>
-          </ContentSection>
-        </div>
+        <Content>
+          <div>
+            <Image
+              src={series.img}
+              width={256}
+              height={346}
+              alt={series.title}
+            />
+          </div>
+          <Header>
+            <GenreContainer>
+              <GenreSection>
+                <Genre>{series.genre}</Genre>
+                <Author>{series.author}</Author>
+              </GenreSection>
+              <Title>{series.title}</Title>
+              <Status>{series.status}</Status>
+            </GenreContainer>
+            <hr
+              style={{
+                border: "none",
+                borderTop: "1px solid #e9e7e7",
+              }}
+            />
+            <Description>{series.description}</Description>
+          </Header>
+        </Content>
+        <ReviewSection>
+          <Review>
+            <div>평점</div>
+            <div>별</div>
+            <div>{series.star}</div>
+            <div>({series.review}명)</div>
+          </Review>
+          <hr
+            style={{
+              border: "none",
+              borderTop: "1px solid #e9e7e7",
+            }}
+          />
+          <Star>별점 매기기</Star>
+        </ReviewSection>
       </Main>
     </>
   );
 }
 
 const Main = styled.main`
-  width: 1111px;
-  height: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px auto;
+`;
+
+const Content = styled.section`
+  width: 256px;
+  background-color: white;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  gap: 25px;
-  padding-top: 25px;
+  border-radius: 12px;
+  gap: 10px;
 `;
 
 const Header = styled.header`
-  width: 1100px;
-  background-color: white;
   display: flex;
-  justify-content: space-between;
-  padding: 25px 28px;
-  border-radius: 12px;
+  flex-direction: column;
+  gap: 10px;
 `;
 
-const ContentHeader = styled.div`
-  width: 1130px;
+const GenreContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`;
+
+const GenreSection = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 25px;
-  color: #8f91ac;
+`;
+
+const Genre = styled.p`
+  font-size: 11px;
+  color: #484848;
+`;
+
+const Author = styled.p`
   font-size: 12px;
-  margin: 0 auto;
+  color: #484848;
 `;
 
-const ContentSort = styled.div`
+const Status = styled.div`
+  width: 35px;
+  padding: 2px;
+  color: #fff;
+  background-color: #17aebb;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Title = styled.p`
+  font-size: 20px;
+  color: #222222;
+  font-weight: 600;
+`;
+
+const Description = styled.div`
+  font-size: 14px;
+  color: #777777;
+`;
+
+const ReviewSection = styled.section`
+  background-color: white;
+  height: 100%;
+
+  border-radius: 12px;
+  flex: 2 1 400px;
+`;
+
+const Review = styled.div`
+  padding: 15px;
   display: flex;
   gap: 10px;
 `;
 
-const ContentSection = styled.section``;
-
-const ContentWrapper = styled.section`
-  width: 1150px;
-  height: 400px;
+const Star = styled.div`
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  gap: 20px;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-  width: 214px;
-  height: 303px;
-  border-radius: 10px;
-  overflow: hidden;
-`;
-
-const Genre = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-`;
-
-const Review = styled.div`
-  display: flex;
-  font-size: 12px;
-  color: #484848;
+  padding: 25px 28px;
 `;

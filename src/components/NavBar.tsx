@@ -51,7 +51,7 @@ export default function NavBar() {
           컬렉션
         </StyledLink>
         <StyledLink
-          href="/search/total"
+          href="/search/genre/total"
           onClick={() => setPage("search")}
           $page={page === "search"}
         >

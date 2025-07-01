@@ -1,5 +1,6 @@
 import { reviewTop, totalTop } from "@/lib/dummyData";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -61,7 +62,7 @@ export default function PlatformCategory() {
       </Nav>
       <Container>
         {current.map((webtoon: Webtoon) => (
-          <div key={webtoon.id}>
+          <Link href={"/search/1"} key={webtoon.id}>
             <ImageWrapper>
               <Image src={webtoon.img} alt={webtoon.title} fill priority />
             </ImageWrapper>
@@ -76,7 +77,7 @@ export default function PlatformCategory() {
                 <div>{`${webtoon.star} (${webtoon.review})`}</div>
               </Review>
             </ContentWrapper>
-          </div>
+          </Link>
         ))}
       </Container>
       <MoreButton>
