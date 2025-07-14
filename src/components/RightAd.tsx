@@ -11,14 +11,12 @@ export default function RightAd() {
 const Main = styled.main`
   width: 300px;
   height: 500px;
-  position: fixed;
-  right: 30px;
-  top: 250px;
   border: 1px solid #b2b1b1;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 200px;
 
   @media only screen and (max-width: 1840px) {
     display: none;
