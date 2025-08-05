@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import styled, { css, keyframes } from "styled-components";
+import {useEffect, useState} from "react";
+import styled, {css, keyframes} from "styled-components";
 
 export default function NavBar() {
   const [isHidden, setIsHidden] = useState(false);
@@ -22,25 +22,17 @@ export default function NavBar() {
   return (
     <Main $hidden={isHidden}>
       <Section>
-        <StyledLink
-          href="/"
-          onClick={() => setPage("home")}
-          $page={page === "home"}
-        >
+        <StyledLink href="/" onClick={() => setPage("home")} $page={page === "home"}>
           ㅇㅌㄴ
         </StyledLink>
         <StyledLink
-          href="/ranking"
+          href="/ranking/top/total"
           onClick={() => setPage("ranking")}
           $page={page === "ranking"}
         >
           랭킹
         </StyledLink>
-        <StyledLink
-          href="/review"
-          onClick={() => setPage("review")}
-          $page={page === "review"}
-        >
+        <StyledLink href="/review" onClick={() => setPage("review")} $page={page === "review"}>
           리뷰
         </StyledLink>
         <StyledLink
@@ -84,7 +76,7 @@ const slideDown = keyframes`
   }
 `;
 
-const Main = styled.nav<{ $hidden: boolean }>`
+const Main = styled.nav<{$hidden: boolean}>`
   background-color: white;
   width: 100%;
   height: 80px;
@@ -95,9 +87,9 @@ const Main = styled.nav<{ $hidden: boolean }>`
   z-index: 1000;
   top: 0;
   left: 0;
-  position: ${({ $hidden }) => ($hidden ? "fixed" : "absolute")};
+  position: ${({$hidden}) => ($hidden ? "fixed" : "absolute")};
 
-  ${({ $hidden }) =>
+  ${({$hidden}) =>
     $hidden &&
     css`
       animation: ${slideDown} 0.4s ease forwards;
@@ -120,11 +112,11 @@ const SearchSection = styled.section`
   gap: 30px;
 `;
 
-const StyledLink = styled(Link)<{ $page: boolean }>`
+const StyledLink = styled(Link)<{$page: boolean}>`
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  color: ${({ $page }) => ($page ? " #23d2e2" : "#000")};
+  color: ${({$page}) => ($page ? " #23d2e2" : "#000")};
 
   &:hover {
     color: #23d2e2;

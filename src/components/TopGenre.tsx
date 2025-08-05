@@ -1,21 +1,24 @@
 "use client";
 
+import {GENRE} from "@/constants/topList";
 import Link from "next/link";
 import styled from "styled-components";
 
-export default function TopGenre() {
+interface TopGenreProps {
+  list: string[][];
+}
+
+export default function TopGenre({list}: TopGenreProps) {
+  const genre = list === GENRE;
+  console.log(genre);
+
   return (
     <Main>
-      <Article href="/search/genre/total">전체</Article>
-      <Article href="/search/genre/romance">로맨스</Article>
-      <Article href="/search/genre/romance-fantasy">로판</Article>
-      <Article href="/search/genre/fantasy">판타지</Article>
-      <Article href="/search/genre/contemporary-fantasy">협판</Article>
-      <Article href="/search/genre/martial-art">무협</Article>
-      <Article href="/search/genre/drama">드라마</Article>
-      <Article href="/search/genre/light-novel">라이트노벨</Article>
-      <Article href="/search/genre/sprots">스포츠</Article>
-      <Article href="/search/genre/gag">개그</Article>
+      {list.map((el: string[], idx) => (
+        <Article href={genre ? `/search/genre/${el[1]}` : `/ranking/${el[1]}`} key={idx}>
+          {el[0]}
+        </Article>
+      ))}
     </Main>
   );
 }

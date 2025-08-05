@@ -1,10 +1,11 @@
 "use client";
 
 import TopGenre from "@/components/TopGenre";
-import { totalWebToon } from "@/lib/dummyData";
+import {GENRE} from "@/constants/topList";
+import {totalWebToon} from "@/lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import {useParams} from "next/navigation";
 import styled from "styled-components";
 
 interface Webtoon {
@@ -23,7 +24,7 @@ export default function GenrePage() {
 
   return (
     <>
-      <TopGenre />
+      <TopGenre list={GENRE} />
       <Main>
         <Header>
           <div>{slug}</div>
@@ -44,19 +45,14 @@ export default function GenrePage() {
               {totalWebToon.map((webtoon: Webtoon) => (
                 <Link href={"/search/1"} key={webtoon.id}>
                   <ImageWrapper>
-                    <Image
-                      src={webtoon.img}
-                      alt={webtoon.title}
-                      fill
-                      priority
-                    />
+                    <Image src={webtoon.img} alt={webtoon.title} fill priority />
                   </ImageWrapper>
                   <Content>
                     <Genre>
                       <div>{webtoon.genre}</div>
                       <div>{webtoon.author}</div>
                     </Genre>
-                    <div style={{ fontSize: "15px" }}>{webtoon.title}</div>
+                    <div style={{fontSize: "15px"}}>{webtoon.title}</div>
                     <Review>
                       <div>별 이미지</div>
                       <div>{`${webtoon.star} (${webtoon.review})`}</div>
