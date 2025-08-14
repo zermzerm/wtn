@@ -2,6 +2,8 @@
 
 import {GENRE} from "@/constants/topList";
 import Link from "next/link";
+import {useSearchParams} from "next/navigation";
+import {useState} from "react";
 import styled from "styled-components";
 
 interface TopGenreProps {
@@ -10,15 +12,28 @@ interface TopGenreProps {
 
 export default function TopGenre({list}: TopGenreProps) {
   const genre = list === GENRE;
-  console.log(genre);
+  const [page, setPage] = useState(list[0][0]);
+
+  const searchParams = useSearchParams();
+  const currentPage = searchParams.get("page") || list[0][0];
 
   return (
     <Main>
-      {list.map((el: string[], idx) => (
-        <Article href={genre ? `/search/genre/${el[1]}` : `/ranking/${el[1]}`} key={idx}>
-          {el[0]}
-        </Article>
-      ))}
+      {list.map((el: string[], idx) => {
+        console.log(page, el[0]);
+        return (
+          <Article
+            href={
+              genre ? `/search/genre/${el[1]}?page=${el[0]}` : `/ranking/${el[1]}?page=${el[0]}`
+            }
+            key={idx}
+            onClick={() => setPage(el[0])}
+            $page={currentPage === el[0]}
+          >
+            {el[0]}
+          </Article>
+        );
+      })}
     </Main>
   );
 }
@@ -33,7 +48,7 @@ const Main = styled.main`
   background-color: white;
 `;
 
-const Article = styled(Link)`
+const Article = styled(Link)<{$page: boolean}>`
   padding: 6px 16px;
   border: 3px solid transparent;
   &:hover {
@@ -42,4 +57,12 @@ const Article = styled(Link)`
     border: 3px solid #23dee2;
     border-radius: 20px;
   }
+  ${({$page}) =>
+    $page &&
+    `
+    color: #23d2e2;
+    cursor: pointer;
+    border: 3px solid #23d2e2;
+    border-radius: 20px;
+`}
 `;

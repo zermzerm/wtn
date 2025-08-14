@@ -2,19 +2,19 @@
 
 import TopGenre from "@/components/TopGenre";
 import {RANKING} from "@/constants/topList";
-// import {useParams} from "next/navigation";
+import {useParams} from "next/navigation";
 import styled from "styled-components";
 
-export default function Top() {
-  // const params = useParams();
-  // const slug = params.slug as string;
+export default function Author() {
+  const params = useParams();
+  const slug = params.slug as string;
 
   return (
     <>
       <TopGenre list={RANKING} />
       <Main>
         <Header>
-          <div>TOP 30</div>
+          <div>{slug}</div>
           <div>검색</div>
         </Header>
       </Main>

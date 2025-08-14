@@ -12,7 +12,7 @@ export const GENRE = [
 ];
 
 export const RANKING = [
-  ["TOP 30", "top/total"],
+  ["TOP30", "top/total"],
   ["플랫폼", "platform/total"],
-  ["작가", "author"],
+  ["작가", "author/total"],
 ];
