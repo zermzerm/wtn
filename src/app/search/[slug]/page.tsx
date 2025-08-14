@@ -1,7 +1,8 @@
 "use client";
 
 import TopGenre from "@/components/TopGenre";
-import { series } from "@/lib/dummyData";
+import {GENRE} from "@/constants/topList";
+import {series} from "@/lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
 // import { useParams } from "next/navigation";
@@ -12,16 +13,11 @@ export default function Series() {
 
   return (
     <>
-      <TopGenre />
+      <TopGenre list={GENRE} />
       <Main>
         <Content>
           <div>
-            <Image
-              src={series.img}
-              width={256}
-              height={346}
-              alt={series.title}
-            />
+            <Image src={series.img} width={256} height={346} alt={series.title} />
           </div>
           <Header>
             <GenreContainer>

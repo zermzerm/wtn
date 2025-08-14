@@ -1,22 +1,27 @@
 "use client";
 
+import Tag from "@/components/Tag";
 import TopGenre from "@/components/TopGenre";
-import {RANKING} from "@/constants/topList";
-import {useParams} from "next/navigation";
+import {RANKING, WORK} from "@/constants/topList";
+// import {useParams} from "next/navigation";
 import styled from "styled-components";
 
 export default function Author() {
-  const params = useParams();
-  const slug = params.slug as string;
+  //   const params = useParams();
+  //   const slug = params.slug as string;
 
   return (
     <>
       <TopGenre list={RANKING} />
       <Main>
         <Header>
-          <div>{slug}</div>
-          <div>검색</div>
+          <h2>작가 BEST</h2>
+          <div>
+            <P>많은 분들이 찾고 있는 작가를 찾아보세요!</P>
+            <P>관심있는 작가분이 계신가요? 작가의 다른 작품도 한번 읽어보세요!</P>
+          </div>
         </Header>
+        <Tag list={WORK} />
       </Main>
     </>
   );
@@ -41,4 +46,10 @@ const Header = styled.header`
   justify-content: space-between;
   padding: 25px 28px;
   border-radius: 12px;
+`;
+
+const P = styled.p`
+  font-size: 14px;
+  color: #484848;
+  text-align: right;
 `;

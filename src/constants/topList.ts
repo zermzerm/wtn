@@ -11,6 +11,22 @@ export const GENRE = [
   ["개그", "gag"],
 ];
 
+export const YEARS = [
+  "2025년도",
+  "2024년도",
+  "2023년도",
+  "2022년도",
+  "2021년도",
+  "2020년도",
+  "2019년도",
+  "2018년도",
+  "2017년도",
+  "2016년도",
+  "2015년도 이전",
+];
+
+export const WORK = ["작품 별점합계 많은 순", "작품리뷰 많은 순", "작품 많은 순"];
+
 export const RANKING = [
   ["TOP30", "top/total"],
   ["플랫폼", "platform/total"],
