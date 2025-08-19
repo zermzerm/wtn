@@ -1,8 +1,67 @@
+export const authorWork = [
+  {
+    id: 1,
+    img: "/images/jo.png",
+    name: "김규삼",
+    star: 4.23,
+    review: 5131,
+    work: 4,
+  },
+  {
+    id: 2,
+    img: "/images/jo.png",
+    name: "조석",
+    star: 4.5,
+    review: 3898,
+    work: 4,
+  },
+  {
+    id: 3,
+    img: "/images/jo.png",
+    name: "박태준",
+    star: 4.3,
+    review: 3121,
+    work: 3,
+  },
+  {
+    id: 4,
+    img: "/images/jo.png",
+    name: "미티",
+    star: 4.6,
+    review: 2587,
+    work: 6,
+  },
+  {
+    id: 5,
+    img: "/images/jo.png",
+    name: "기안84",
+    star: 4.14,
+    review: 6729,
+    work: 4,
+  },
+  {
+    id: 6,
+    img: "/images/jo.png",
+    name: "고경철",
+    star: 1.03,
+    review: 1,
+    work: 1,
+  },
+  {
+    id: 7,
+    img: "/images/jo.png",
+    name: "김근희",
+    star: 0.95,
+    review: 1,
+    work: 1,
+  },
+];
+
 export const swiperDummy = [
-  { id: 1, title: "1번이미지", img: "/images/swiperImage.jpeg" },
-  { id: 2, title: "2번이미지", img: "/images/tai.jpg" },
-  { id: 3, title: "3번이미지", img: "/images/swiperImage.jpeg" },
-  { id: 4, title: "4번이미지", img: "/images/swiperImage.jpeg" },
+  {id: 1, title: "1번이미지", img: "/images/swiperImage.jpeg"},
+  {id: 2, title: "2번이미지", img: "/images/tai.jpg"},
+  {id: 3, title: "3번이미지", img: "/images/swiperImage.jpeg"},
+  {id: 4, title: "4번이미지", img: "/images/swiperImage.jpeg"},
 ];
 
 export const totalTop = [

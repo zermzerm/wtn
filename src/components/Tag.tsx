@@ -28,6 +28,7 @@ const Div = styled.div`
   display: inline-block;
   text-decoration: none;
   padding-bottom: 10px;
+  cursor: pointer;
 
   &::after {
     content: "";
