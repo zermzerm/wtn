@@ -1,17 +1,13 @@
 "use client";
 
-import Card from "@/components/Card";
+import AuthorCard from "@/components/AuthorCard";
 import Tag from "@/components/Tag";
 import TopGenre from "@/components/TopGenre";
 import {RANKING, WORK} from "@/constants/topList";
 import {authorWork} from "@/lib/dummyData";
-// import {useParams} from "next/navigation";
 import styled from "styled-components";
 
 export default function Author() {
-  //   const params = useParams();
-  //   const slug = params.slug as string;
-
   return (
     <>
       <TopGenre list={RANKING} />
@@ -26,7 +22,7 @@ export default function Author() {
         <Tag list={WORK} />
         <CardWrapper>
           {authorWork.map((el) => (
-            <Card key={el.id} data={el} />
+            <AuthorCard key={el.id} data={el} />
           ))}
         </CardWrapper>
       </Main>

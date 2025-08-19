@@ -18,7 +18,8 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 35px;
+  height: 48px;
 `;
 
 const Div = styled.div`

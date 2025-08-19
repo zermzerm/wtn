@@ -1,33 +1,21 @@
 "use client";
 
+import Card from "@/components/Card";
 import TopGenre from "@/components/TopGenre";
 import {GENRE} from "@/constants/topList";
-import {totalWebToon} from "@/lib/dummyData";
-import Image from "next/image";
-import Link from "next/link";
 import {useParams} from "next/navigation";
 import styled from "styled-components";
-
-interface Webtoon {
-  id: number;
-  title: string;
-  genre: string;
-  author: string;
-  star: number;
-  review: number;
-  img: string;
-}
 
 export default function GenrePage() {
   const params = useParams();
   const slug = params.slug as string;
-
+  const title = GENRE.filter((el) => el[1] === slug)[0][0];
   return (
     <>
       <TopGenre list={GENRE} />
       <Main>
         <Header>
-          <div>{slug}</div>
+          <h2>{title}</h2>
           <div>검색</div>
         </Header>
         <div>
@@ -40,28 +28,7 @@ export default function GenrePage() {
               <div>리뷰순</div>
             </ContentSort>
           </ContentHeader>
-          <ContentSection>
-            <ContentWrapper>
-              {totalWebToon.map((webtoon: Webtoon) => (
-                <Link href={"/search/1"} key={webtoon.id}>
-                  <ImageWrapper>
-                    <Image src={webtoon.img} alt={webtoon.title} fill priority />
-                  </ImageWrapper>
-                  <Content>
-                    <Genre>
-                      <div>{webtoon.genre}</div>
-                      <div>{webtoon.author}</div>
-                    </Genre>
-                    <div style={{fontSize: "15px"}}>{webtoon.title}</div>
-                    <Review>
-                      <div>별 이미지</div>
-                      <div>{`${webtoon.star} (${webtoon.review})`}</div>
-                    </Review>
-                  </Content>
-                </Link>
-              ))}
-            </ContentWrapper>
-          </ContentSection>
+          <Card />
         </div>
       </Main>
     </>
@@ -102,41 +69,4 @@ const ContentHeader = styled.div`
 const ContentSort = styled.div`
   display: flex;
   gap: 10px;
-`;
-
-const ContentSection = styled.section``;
-
-const ContentWrapper = styled.section`
-  width: 1150px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  gap: 20px;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-  width: 214px;
-  height: 303px;
-  border-radius: 10px;
-  overflow: hidden;
-`;
-
-const Genre = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-`;
-
-const Review = styled.div`
-  display: flex;
-  font-size: 12px;
-  color: #484848;
 `;

@@ -1,14 +1,12 @@
 "use client";
 
+import Card from "@/components/Card";
+import Tag from "@/components/Tag";
 import TopGenre from "@/components/TopGenre";
-import {RANKING} from "@/constants/topList";
-// import {useParams} from "next/navigation";
+import {RANKING, TOP_GENRE, TOTAL, YEARS} from "@/constants/topList";
 import styled from "styled-components";
 
 export default function Top() {
-  // const params = useParams();
-  // const slug = params.slug as string;
-
   return (
     <>
       <TopGenre list={RANKING} />
@@ -20,6 +18,12 @@ export default function Top() {
             <P>여기에 있는 작품들을 먼저 보시겠어요?</P>
           </div>
         </Header>
+        <div>
+          <Tag list={TOP_GENRE} />
+          <Tag list={YEARS} />
+          <Tag list={TOTAL} />
+        </div>
+        <Card />
       </Main>
     </>
   );

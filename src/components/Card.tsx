@@ -1,62 +1,74 @@
+import styled from "styled-components";
+import {totalWebToon} from "@/lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";
-import styled from "styled-components";
 
-interface DataProps {
-  data: {
-    id: number;
-    img: string;
-    name: string;
-    star: number;
-    review: number;
-    work: number;
-  };
+interface Webtoon {
+  id: number;
+  title: string;
+  genre: string;
+  author: string;
+  star: number;
+  review: number;
+  img: string;
 }
 
-export default function Card({data}: DataProps) {
+export default function Card() {
   return (
-    <Container href={`/author/${data.id}`}>
-      <Image
-        src={data.img}
-        alt={data.name}
-        width={80}
-        height={80}
-        style={{borderRadius: 100, border: "3px solid #23d2e2"}}
-      />
-      <Name>{data.name}</Name>
-      <Star>평균평점 {data.star}</Star>
-      <div>별</div>
-      <Work>작품 리뷰수 ({data.review})</Work>
-      <Work>작품수 ({data.work})</Work>
-    </Container>
+    <ContentWrapper>
+      {totalWebToon.map((webtoon: Webtoon) => (
+        <Link href={"/search/1"} key={webtoon.id}>
+          <ImageWrapper>
+            <Image src={webtoon.img} alt={webtoon.title} fill priority sizes="100vw" />
+          </ImageWrapper>
+          <Content>
+            <Genre>
+              <div>{webtoon.genre}</div>
+              <div>{webtoon.author}</div>
+            </Genre>
+            <div style={{fontSize: "15px"}}>{webtoon.title}</div>
+            <Review>
+              <div>별 이미지</div>
+              <div>{`${webtoon.star} (${webtoon.review})`}</div>
+            </Review>
+          </Content>
+        </Link>
+      ))}
+    </ContentWrapper>
   );
 }
 
-const Container = styled(Link)`
-  width: 135px;
-  height: 224px;
-  border-radius: 12px;
-  background-color: white;
-  padding: 20px;
+const ContentWrapper = styled.section`
+  width: 1150px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  gap: 20px;
+`;
+
+const Content = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
 `;
 
-const Name = styled.p`
-  font-size: 16px;
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 214px;
+  height: 303px;
+  border-radius: 10px;
+  overflow: hidden;
+`;
+
+const Genre = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+`;
+
+const Review = styled.div`
+  display: flex;
+  font-size: 12px;
   color: #484848;
-  padding-top: 15px;
-`;
-
-const Star = styled.p`
-  font-size: 11px;
-  color: #777777;
-`;
-
-const Work = styled.p`
-  font-size: 13px;
-  color: #bbbbbb;
 `;

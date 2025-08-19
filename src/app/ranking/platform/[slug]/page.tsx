@@ -1,14 +1,12 @@
 "use client";
 
+import Card from "@/components/Card";
+import Tag from "@/components/Tag";
 import TopGenre from "@/components/TopGenre";
-import {RANKING} from "@/constants/topList";
-// import {useParams} from "next/navigation";
+import {PLATFORM, RANKING} from "@/constants/topList";
 import styled from "styled-components";
 
 export default function Platform() {
-  // const params = useParams();
-  // const slug = params.slug as string;
-
   return (
     <>
       <TopGenre list={RANKING} />
@@ -20,6 +18,8 @@ export default function Platform() {
             <P>각 플랫폼의 대표작들을 소개해드립니다.</P>
           </div>
         </Header>
+        <Tag list={PLATFORM} />
+        <Card />
       </Main>
     </>
   );

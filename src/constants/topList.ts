@@ -12,6 +12,7 @@ export const GENRE = [
 ];
 
 export const YEARS = [
+  "전체",
   "2025년도",
   "2024년도",
   "2023년도",
@@ -24,6 +25,23 @@ export const YEARS = [
   "2016년도",
   "2015년도 이전",
 ];
+
+export const TOP_GENRE = [
+  "TOP 30 전체",
+  "로맨스",
+  "로판",
+  "판타지",
+  "협판",
+  "무협",
+  "드라마",
+  "라이트노벨",
+  "스포츠",
+  "개그",
+];
+
+export const TOTAL = ["전체", "완결작", "미완결작"];
+
+export const PLATFORM = ["네이버", "레진", "카카오"];
 
 export const WORK = ["작품 별점합계 많은 순", "작품리뷰 많은 순", "작품 많은 순"];
 

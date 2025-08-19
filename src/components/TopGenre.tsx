@@ -20,7 +20,7 @@ export default function TopGenre({list}: TopGenreProps) {
   return (
     <Main>
       {list.map((el: string[], idx) => {
-        console.log(page, el[0]);
+        // console.log(page, el[0]);
         return (
           <Article
             href={
