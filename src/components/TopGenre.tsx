@@ -1,6 +1,6 @@
 "use client";
 
-import {GENRE} from "@/constants/topList";
+import {GENRE, RANKING} from "@/constants/topList";
 import Link from "next/link";
 import {useSearchParams} from "next/navigation";
 import {useState} from "react";
@@ -24,7 +24,11 @@ export default function TopGenre({list}: TopGenreProps) {
         return (
           <Article
             href={
-              genre ? `/search/genre/${el[1]}?page=${el[0]}` : `/ranking/${el[1]}?page=${el[0]}`
+              genre
+                ? `/search/genre/${el[1]}?page=${el[0]}`
+                : list === RANKING
+                ? `/ranking/${el[1]}?page=${el[0]}`
+                : `/review/${el[1]}?page=${el[0]}`
             }
             key={idx}
             onClick={() => setPage(el[0])}

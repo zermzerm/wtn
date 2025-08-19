@@ -39,6 +39,12 @@ export const TOP_GENRE = [
   "개그",
 ];
 
+export const REVIEW = [
+  ["최신리뷰", "/"],
+  ["맞춤리뷰", "/recommend"],
+  ["리뷰쓰기", "/writeReview"],
+];
+
 export const TOTAL = ["전체", "완결작", "미완결작"];
 
 export const PLATFORM = ["네이버", "레진", "카카오"];

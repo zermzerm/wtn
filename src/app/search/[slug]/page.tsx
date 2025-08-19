@@ -5,12 +5,8 @@ import {GENRE} from "@/constants/topList";
 import {series} from "@/lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
-// import { useParams } from "next/navigation";
 
 export default function Series() {
-  //   const params = useParams();
-  //   const slug = params.slug as string;
-
   return (
     <>
       <TopGenre list={GENRE} />
