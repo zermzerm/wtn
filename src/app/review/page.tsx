@@ -1,7 +1,10 @@
 "use client";
 
+import ReviewCard from "@/components/ReviewCard";
+import Tag from "@/components/Tag";
 import TopGenre from "@/components/TopGenre";
-import {REVIEW} from "@/constants/topList";
+import {REVIEW, TOP_REVIEW_GENRE} from "@/constants/topList";
+import {reviewData} from "@/lib/dummyData";
 import styled from "styled-components";
 
 export default function Review() {
@@ -10,12 +13,18 @@ export default function Review() {
       <TopGenre list={REVIEW} />
       <Main>
         <Header>
-          <h2>최신 리뷰</h2>
+          <H>최신리뷰</H>
           <div>
             <P>최근에 작성된 리뷰를 확인해보세요!</P>
             <P>의외로 재밌는 작품을 찾으실지도 몰라요!</P>
           </div>
         </Header>
+        <Tag list={TOP_REVIEW_GENRE} />
+        <ReviewContainer>
+          {reviewData.map((review) => (
+            <ReviewCard data={review} key={review.id} />
+          ))}
+        </ReviewContainer>
       </Main>
     </div>
   );
@@ -46,4 +55,16 @@ const P = styled.p`
   font-size: 14px;
   color: #484848;
   text-align: right;
+`;
+
+const H = styled.h2`
+  color: #3e3f5e;
+  font-weight: 550;
+`;
+
+const ReviewContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 20px;
 `;

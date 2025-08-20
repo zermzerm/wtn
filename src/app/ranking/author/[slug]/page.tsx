@@ -13,7 +13,7 @@ export default function Author() {
       <TopGenre list={RANKING} />
       <Main>
         <Header>
-          <h2>작가 BEST</h2>
+          <H>작가 BEST</H>
           <div>
             <P>많은 분들이 찾고 있는 작가를 찾아보세요!</P>
             <P>관심있는 작가분이 계신가요? 작가의 다른 작품도 한번 읽어보세요!</P>
@@ -55,6 +55,11 @@ const P = styled.p`
   font-size: 14px;
   color: #484848;
   text-align: right;
+`;
+
+const H = styled.h2`
+  color: #3e3f5e;
+  font-weight: 550;
 `;
 
 const CardWrapper = styled.section`

@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import Nav from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "WebToonNet",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <Nav />
         <div style={{paddingTop: "80px"}}>{children}</div>
+        <Footer />
       </body>
     </html>
   );

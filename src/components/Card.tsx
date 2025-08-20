@@ -40,7 +40,7 @@ export default function Card() {
 
 const ContentWrapper = styled.section`
   width: 1150px;
-  height: 400px;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

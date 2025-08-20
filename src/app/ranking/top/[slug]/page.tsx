@@ -12,7 +12,7 @@ export default function Top() {
       <TopGenre list={RANKING} />
       <Main>
         <Header>
-          <h2>TOP 30</h2>
+          <H>TOP 30</H>
           <div>
             <P>웹툰넷의 웹툰 중 가장 인기있는 웹툰이에요!</P>
             <P>여기에 있는 작품들을 먼저 보시겠어요?</P>
@@ -55,4 +55,9 @@ const P = styled.p`
   font-size: 14px;
   color: #484848;
   text-align: right;
+`;
+
+const H = styled.h2`
+  color: #3e3f5e;
+  font-weight: 550;
 `;

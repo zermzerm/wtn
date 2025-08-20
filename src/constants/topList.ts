@@ -39,6 +39,19 @@ export const TOP_GENRE = [
   "개그",
 ];
 
+export const TOP_REVIEW_GENRE = [
+  "최신리뷰 전체",
+  "로맨스",
+  "로판",
+  "판타지",
+  "협판",
+  "무협",
+  "드라마",
+  "라이트노벨",
+  "스포츠",
+  "개그",
+];
+
 export const REVIEW = [
   ["최신리뷰", "/"],
   ["맞춤리뷰", "/recommend"],

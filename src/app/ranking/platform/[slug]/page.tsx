@@ -12,7 +12,7 @@ export default function Platform() {
       <TopGenre list={RANKING} />
       <Main>
         <Header>
-          <h2>플랫폼 BEST</h2>
+          <H>플랫폼 BEST</H>
           <div>
             <P>웹툰 대표 플랫폼 내의 웹툰 순위를 확인해보세요!</P>
             <P>각 플랫폼의 대표작들을 소개해드립니다.</P>
@@ -50,4 +50,9 @@ const P = styled.p`
   font-size: 14px;
   color: #484848;
   text-align: right;
+`;
+
+const H = styled.h2`
+  color: #3e3f5e;
+  font-weight: 550;
 `;

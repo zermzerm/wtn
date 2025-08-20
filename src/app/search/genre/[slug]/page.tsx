@@ -15,7 +15,7 @@ export default function GenrePage() {
       <TopGenre list={GENRE} />
       <Main>
         <Header>
-          <h2>{title}</h2>
+          <H>{title}</H>
           <div>검색</div>
         </Header>
         <div>
@@ -69,4 +69,9 @@ const ContentHeader = styled.div`
 const ContentSort = styled.div`
   display: flex;
   gap: 10px;
+`;
+
+const H = styled.h2`
+  color: #3e3f5e;
+  font-weight: 550;
 `;
