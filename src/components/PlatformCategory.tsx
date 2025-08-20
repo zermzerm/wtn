@@ -1,7 +1,7 @@
-import { reviewTop, totalTop } from "@/lib/dummyData";
+import {reviewTop, totalTop} from "@/lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import {useState} from "react";
 import styled from "styled-components";
 
 interface Webtoon {
@@ -64,14 +64,14 @@ export default function PlatformCategory() {
         {current.map((webtoon: Webtoon) => (
           <Link href={"/search/1"} key={webtoon.id}>
             <ImageWrapper>
-              <Image src={webtoon.img} alt={webtoon.title} fill priority />
+              <Image src={webtoon.img} alt={webtoon.title} fill priority sizes="max-width:214px" />
             </ImageWrapper>
             <ContentWrapper>
               <Genre>
                 <div>{webtoon.genre}</div>
                 <div>{webtoon.author}</div>
               </Genre>
-              <div style={{ fontSize: "15px" }}>{webtoon.title}</div>
+              <div style={{fontSize: "15px"}}>{webtoon.title}</div>
               <Review>
                 <div>별 이미지</div>
                 <div>{`${webtoon.star} (${webtoon.review})`}</div>
@@ -112,9 +112,9 @@ const MoreDiv = styled.div`
   }
 `;
 
-const ClickDiv = styled.div<{ $active: boolean }>`
-  font-weight: ${({ $active }) => ($active ? "bold" : "normal")};
-  text-decoration: ${({ $active }) => ($active ? "underline" : "none")};
+const ClickDiv = styled.div<{$active: boolean}>`
+  font-weight: ${({$active}) => ($active ? "bold" : "normal")};
+  text-decoration: ${({$active}) => ($active ? "underline" : "none")};
   text-underline-offset: 10px;
   text-decoration-color: #23d2e2;
   text-decoration-thickness: 3px;

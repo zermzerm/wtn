@@ -1,13 +1,13 @@
 "use client";
 
-import { swiperDummy } from "@/lib/dummyData";
+import {swiperDummy} from "@/lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Navigation} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useRef } from "react";
+import {useRef} from "react";
 
 export default function SwiperSection() {
   const prevRef = useRef(null);
@@ -37,12 +37,12 @@ export default function SwiperSection() {
             }
           });
         }}
-        style={{ width: "100%", height: "100%" }}
+        style={{width: "100%", height: "100%"}}
       >
         {swiperDummy.map((slide) => (
           <SwiperSlide key={slide.id}>
             <ImageWrapper>
-              <Image src={slide.img} alt="slide-image" fill priority />
+              <Image src={slide.img} alt="slide-image" fill priority sizes="max-width:386px" />
             </ImageWrapper>
           </SwiperSlide>
         ))}

@@ -19,7 +19,7 @@ export default function Card() {
       {totalWebToon.map((webtoon: Webtoon) => (
         <Link href={"/search/1"} key={webtoon.id}>
           <ImageWrapper>
-            <Image src={webtoon.img} alt={webtoon.title} fill priority sizes="100vw" />
+            <Image src={webtoon.img} alt={webtoon.title} fill priority sizes="max-width:214px" />
           </ImageWrapper>
           <Content>
             <Genre>

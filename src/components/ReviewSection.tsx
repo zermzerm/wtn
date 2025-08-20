@@ -1,4 +1,4 @@
-import { recentReview } from "@/lib/dummyData";
+import {recentReview} from "@/lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -9,7 +9,7 @@ export default function ReviewSection() {
       <Section>
         {recentReview.map((review) => (
           <Content key={review.id}>
-            <Image src={review.img} width={72} height={72} alt={review.name} />
+            <Image src={review.img} width={72} height={72} alt={review.name} sizes="100vw" />
             <p>{review.name}</p>
             <div>{review.star}</div>
             <div>{review.content}</div>
