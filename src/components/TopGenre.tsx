@@ -11,7 +11,7 @@ interface TopGenreProps {
 }
 
 export default function TopGenre({list}: TopGenreProps) {
-  const genre = list === GENRE;
+  const genre = JSON.stringify(list) === JSON.stringify(GENRE);
   const [page, setPage] = useState(list[0][0]);
   console.log("list", list);
   console.log("genre", GENRE);
