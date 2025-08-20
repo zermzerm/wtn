@@ -48,7 +48,7 @@ const Main = styled.main`
 `;
 
 const Header = styled.header`
-  width: 1100px;
+  width: 1053px;
   background-color: white;
   display: flex;
   justify-content: space-between;

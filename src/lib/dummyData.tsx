@@ -1,3 +1,48 @@
+export const collectionData = [
+  {
+    id: 1,
+    img: "/images/전지적독자시점.png",
+    title: "평타 이상치는 웹툰 모음",
+    cnt: 80,
+  },
+  {
+    id: 2,
+    img: "/images/전지적독자시점.png",
+    title: "누렁이라면 이정도는 다 봤을꺼다 안봤으면 봐라(내가 재밌게 봤거나 끝까지 본소설",
+    cnt: 30,
+  },
+  {
+    id: 3,
+    img: "/images/전지적독자시점.png",
+    title: "결말이 망작 개 시간아까운 소설 모음",
+    cnt: 10,
+  },
+  {
+    id: 4,
+    img: "/images/전지적독자시점.png",
+    title: "여주물",
+    cnt: 9,
+  },
+  {
+    id: 5,
+    img: "/images/전지적독자시점.png",
+    title: "평타 이상치는 웹툰",
+    cnt: 100,
+  },
+];
+
+export const collectionDetails = [
+  {
+    id: 1,
+    title: "평타 이상치는 웹툰 모음",
+    good: 43,
+    commentCnt: 6,
+    description:
+      "추천하는 작품만 등록.\n\n되도록 읽으면서 걸리는게 적은 어느정도 이상 재미있는 소설을 올리려고 합니다.\n\n제가 다 못 읽은 소설은 나중에 제거될 수도 있습니다\n\n가끔 추가합니다.\n",
+    cnt: 80,
+  },
+];
+
 export const reviewData = [
   {
     id: 1,
