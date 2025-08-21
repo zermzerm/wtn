@@ -58,7 +58,7 @@ export default function SwiperSection() {
 
 const Main = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
   height: 300px;
   padding: 20px 0 60px 0;

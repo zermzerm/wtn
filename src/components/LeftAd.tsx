@@ -9,6 +9,9 @@ export default function LeftAd() {
 }
 
 const Main = styled.main`
+  position: absolute;
+  left: 30px;
+  top: 0;
   width: 300px;
   height: 500px;
   border: 1px solid #b2b1b1;
@@ -16,7 +19,7 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 450px;
 
   @media only screen and (max-width: 1840px) {
     display: none;

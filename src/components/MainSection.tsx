@@ -11,14 +11,14 @@ import styled from "styled-components";
 export default function MainSection() {
   return (
     <Container>
-      <LeftAd />
-      <main>
+      <Main>
         <SwiperSection />
+        <LeftAd />
         <RankingCategory />
         <PlatformCategory />
         <ReviewSection />
-      </main>
-      <RightAd />
+        <RightAd />
+      </Main>
     </Container>
   );
 }
@@ -26,4 +26,8 @@ export default function MainSection() {
 const Container = styled.section`
   display: flex;
   justify-content: space-around;
+`;
+
+const Main = styled.main`
+  position: relative;
 `;

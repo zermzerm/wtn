@@ -157,10 +157,10 @@ export const authorWork = [
 ];
 
 export const swiperDummy = [
-  {id: 1, title: "1번이미지", img: "/images/swiperImage.jpeg"},
-  {id: 2, title: "2번이미지", img: "/images/tai.jpg"},
-  {id: 3, title: "3번이미지", img: "/images/swiperImage.jpeg"},
-  {id: 4, title: "4번이미지", img: "/images/swiperImage.jpeg"},
+  {id: 1, title: "1번이미지", img: "/images/마음의 소리.png"},
+  {id: 2, title: "2번이미지", img: "/images/나혼늅.jpg"},
+  {id: 3, title: "3번이미지", img: "/images/우렉마지노.png"},
+  {id: 4, title: "4번이미지", img: "/images/호랑이형님.png"},
 ];
 
 export const totalTop = [
