@@ -13,12 +13,12 @@ interface Webtoon {
   img: string;
 }
 
-export default function Card() {
+export default function Card({collection = false}) {
   return (
-    <ContentWrapper>
+    <ContentWrapper $collection={collection}>
       {totalWebToon.map((webtoon: Webtoon) => (
         <Link href={"/search/1"} key={webtoon.id}>
-          <ImageWrapper>
+          <ImageWrapper $collection={collection}>
             <Image src={webtoon.img} alt={webtoon.title} fill priority sizes="max-width:214px" />
           </ImageWrapper>
           <Content>
@@ -38,8 +38,8 @@ export default function Card() {
   );
 }
 
-const ContentWrapper = styled.section`
-  width: 1150px;
+const ContentWrapper = styled.section<{$collection: boolean}>`
+  width: ${({$collection}) => ($collection ? "1100px" : "1150px")};
   height: 100%;
   display: flex;
   justify-content: center;
@@ -53,10 +53,10 @@ const Content = styled.div`
   flex-direction: column;
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.div<{$collection: boolean}>`
   position: relative;
-  width: 214px;
-  height: 303px;
+  width: ${({$collection}) => ($collection ? "196px" : "214px")};
+  height: ${({$collection}) => ($collection ? "278px" : "303px")};
   border-radius: 10px;
   overflow: hidden;
 `;

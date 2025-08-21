@@ -34,6 +34,7 @@ export const collectionData = [
 export const collectionDetails = [
   {
     id: 1,
+    name: "모리",
     title: "평타 이상치는 웹툰 모음",
     good: 43,
     commentCnt: 6,
