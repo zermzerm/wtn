@@ -20,7 +20,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <Main $hidden={isHidden}>
+    <Header $hidden={isHidden}>
       <Section>
         <StyledLink href="/" onClick={() => setPage("home")} $page={page === "home"}>
           ㅇㅌㄴ
@@ -61,7 +61,7 @@ export default function NavBar() {
         <p>검색</p>
         <p>로그인</p>
       </SearchSection>
-    </Main>
+    </Header>
   );
 }
 
@@ -76,7 +76,7 @@ const slideDown = keyframes`
   }
 `;
 
-const Main = styled.nav<{$hidden: boolean}>`
+const Header = styled.header<{$hidden: boolean}>`
   background-color: white;
   width: 100%;
   height: 80px;

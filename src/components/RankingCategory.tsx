@@ -1,3 +1,4 @@
+import StarRating from "@/components/StarRating";
 import {reviewTop, totalTop} from "@/lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";
@@ -59,7 +60,9 @@ export default function RankingCategory() {
               </Genre>
               <div style={{fontSize: "15px"}}>{webtoon.title}</div>
               <Review>
-                <div>별 이미지</div>
+                <div>
+                  <StarRating star={webtoon.star} />
+                </div>
                 <div>{`${webtoon.star} (${webtoon.review})`}</div>
               </Review>
             </ContentWrapper>

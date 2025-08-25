@@ -1,5 +1,6 @@
 "use client";
 
+import StarRating from "@/components/StarRating";
 import TopGenre from "@/components/TopGenre";
 import {GENRE} from "@/constants/topList";
 import {series} from "@/lib/dummyData";
@@ -36,7 +37,9 @@ export default function Series() {
         <ReviewSection>
           <Review>
             <div>평점</div>
-            <div>별</div>
+            <div>
+              <StarRating star={series.star} />
+            </div>
             <div>{series.star}</div>
             <div>({series.review}명)</div>
           </Review>
@@ -46,7 +49,9 @@ export default function Series() {
               borderTop: "1px solid #e9e7e7",
             }}
           />
-          <Star>별점 매기기</Star>
+          <Star>
+            <StarRating star={0} />
+          </Star>
         </ReviewSection>
       </Main>
     </>

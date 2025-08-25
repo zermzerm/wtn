@@ -1,3 +1,4 @@
+import StarRating from "@/components/StarRating";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -37,7 +38,10 @@ export default function ReviewCard({data}: DataProps) {
             <WebToonContent>
               <Genre>{data.genre}</Genre>
               <Title>{data.title}</Title>
-              <Star>{data.star}</Star>
+              <Star>
+                {data.star}
+                <StarRating star={data.star} />
+              </Star>
             </WebToonContent>
             <Author>{data.author}</Author>
           </WebToonBody>
@@ -59,7 +63,10 @@ export default function ReviewCard({data}: DataProps) {
           </ReviewerWrapper>
           <Date>{data.date}</Date>
         </ReviewerContainer>
-        <ReviewStar>{data.star}</ReviewStar>
+        <ReviewStar>
+          {data.star}
+          <StarRating star={data.star} />
+        </ReviewStar>
         <ReviewDescription>{data.reviewDescription}</ReviewDescription>
       </Section2>
     </Article>
@@ -110,7 +117,7 @@ const Title = styled.p`
   color: #484848;
   padding-top: 5px;
 `;
-const Star = styled.p`
+const Star = styled.div`
   font-size: 12px;
   color: #73848e;
 `;

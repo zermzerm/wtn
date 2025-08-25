@@ -1,3 +1,4 @@
+import StarRating from "@/components/StarRating";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
@@ -25,7 +26,9 @@ export default function AuthorCard({data}: DataProps) {
       />
       <Name>{data.name}</Name>
       <Star>평균평점 {data.star}</Star>
-      <div>별</div>
+      <div>
+        <StarRating star={data.star} />
+      </div>
       <Work>작품 리뷰수 ({data.review})</Work>
       <Work>작품수 ({data.work})</Work>
     </Container>
