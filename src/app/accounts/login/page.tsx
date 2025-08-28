@@ -54,7 +54,7 @@ const Section = styled.section`
 
 const LoginContainer = styled.div`
   width: 443px;
-  height: 542px;
+  height: 100%;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 20px #c2c2c2;
