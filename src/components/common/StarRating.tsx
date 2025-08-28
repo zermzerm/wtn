@@ -12,12 +12,10 @@ export default function StarRating({star}: StarProps) {
     <div>
       {[...Array(5)].map((el, idx) => {
         const currentValue = idx + 1;
+        const fill =
+          rating >= currentValue ? 100 : rating + 1 > currentValue ? (rating - idx) * 100 : 0;
         return (
-          <Star
-            key={idx}
-            onClick={() => setRating(currentValue)}
-            $color={star >= currentValue ? true : false}
-          >
+          <Star key={idx} onClick={() => setRating(currentValue)} $fill={fill}>
             ★
           </Star>
         );
@@ -26,7 +24,10 @@ export default function StarRating({star}: StarProps) {
   );
 }
 
-const Star = styled.span<{$color: boolean}>`
+const Star = styled.span<{$fill: number}>`
   cursor: pointer;
-  color: ${({$color}) => ($color ? "#000000" : "#ffffff")};
+  font-size: 16px;
+  background: ${({$fill}) => `linear-gradient(90deg, #ffc400 ${$fill}%, #cacaca ${$fill}%)`};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;

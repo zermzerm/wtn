@@ -136,6 +136,7 @@ const ReviewSection = styled.section`
 const Review = styled.div`
   padding: 15px;
   display: flex;
+  align-items: center;
   gap: 10px;
 `;
 
