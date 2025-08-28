@@ -9,7 +9,7 @@ export default function Password() {
     <>
       <TopGenre list={GENRE} />
       <Section>
-        <LoginContainer>
+        <LoginForm>
           <LoginHeader>비밀번호 재설정</LoginHeader>
           <hr
             style={{
@@ -29,7 +29,7 @@ export default function Password() {
             <p>비밀번호를 재성정할 수 있는 링크를 보내드립니다.</p>
             <p>소셜 계정으로 가입하셨을 때는 해당 SNS의 이메일을 입력해주세요.</p>
           </LoginFooter>
-        </LoginContainer>
+        </LoginForm>
       </Section>
     </>
   );
@@ -42,7 +42,7 @@ const Section = styled.section`
   align-items: center;
 `;
 
-const LoginContainer = styled.div`
+const LoginForm = styled.form`
   width: 443px;
   height: 100%;
   background-color: white;

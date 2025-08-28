@@ -10,7 +10,7 @@ export default function Login() {
     <>
       <TopGenre list={GENRE} />
       <Section>
-        <LoginContainer>
+        <LoginForm>
           <LoginHeader>로그인</LoginHeader>
           <hr
             style={{
@@ -39,7 +39,7 @@ export default function Login() {
               </p>
             </LoginFooter>
           </LoginMain>
-        </LoginContainer>
+        </LoginForm>
       </Section>
     </>
   );
@@ -52,7 +52,7 @@ const Section = styled.section`
   align-items: center;
 `;
 
-const LoginContainer = styled.div`
+const LoginForm = styled.form`
   width: 443px;
   height: 100%;
   background-color: white;

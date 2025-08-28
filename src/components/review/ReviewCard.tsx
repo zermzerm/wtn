@@ -188,7 +188,7 @@ const Date = styled.p`
   color: #6c757d;
 `;
 
-const ReviewStar = styled.p``;
+const ReviewStar = styled.div``;
 
 const ReviewDescription = styled.p`
   font-size: 14px;

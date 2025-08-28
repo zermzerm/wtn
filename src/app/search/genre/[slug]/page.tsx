@@ -23,8 +23,11 @@ export default function GenrePage() {
             <div>완결 체크</div>
             <ContentSort>
               <div>최신순</div>
+              <span>·</span>
               <div>인기순</div>
+              <span>·</span>
               <div>추천순</div>
+              <span>·</span>
               <div>리뷰순</div>
             </ContentSort>
           </ContentHeader>

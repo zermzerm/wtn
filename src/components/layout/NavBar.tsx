@@ -51,7 +51,7 @@ export default function NavBar() {
           웹툰 찾기
         </StyledLink>
         <StyledLink
-          href="/community"
+          href="/community/topics/total"
           onClick={() => setPage("community")}
           $page={page === "community"}
         >

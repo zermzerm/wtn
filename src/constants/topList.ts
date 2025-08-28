@@ -11,6 +11,24 @@ export const GENRE = [
   ["개그", "gag"],
 ];
 
+export const COMMUNITY = [
+  ["전체", "total"],
+  ["작품/작가", "series"],
+  ["자유", "free"],
+];
+
+export const RANKING = [
+  ["TOP30", "top/total"],
+  ["플랫폼", "platform/total"],
+  ["작가", "author/total"],
+];
+
+export const REVIEW = [
+  ["최신리뷰", "/"],
+  ["맞춤리뷰", "/recommend"],
+  ["리뷰쓰기", "/writeReview"],
+];
+
 export const YEARS = [
   "전체",
   "2025년도",
@@ -52,20 +70,8 @@ export const TOP_REVIEW_GENRE = [
   "개그",
 ];
 
-export const REVIEW = [
-  ["최신리뷰", "/"],
-  ["맞춤리뷰", "/recommend"],
-  ["리뷰쓰기", "/writeReview"],
-];
-
 export const TOTAL = ["전체", "완결작", "미완결작"];
 
 export const PLATFORM = ["네이버", "레진", "카카오"];
 
 export const WORK = ["작품 별점합계 많은 순", "작품리뷰 많은 순", "작품 많은 순"];
-
-export const RANKING = [
-  ["TOP30", "top/total"],
-  ["플랫폼", "platform/total"],
-  ["작가", "author/total"],
-];
