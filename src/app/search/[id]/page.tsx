@@ -1,7 +1,7 @@
 "use client";
 
-import StarRating from "@/components/StarRating";
-import TopGenre from "@/components/TopGenre";
+import StarRating from "@/components/common/StarRating";
+import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
 import {series} from "@/lib/dummyData";
 import Image from "next/image";

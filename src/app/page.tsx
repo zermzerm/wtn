@@ -1,5 +1,5 @@
-import Genre from "@/components/TopGenre";
-import MainSection from "@/components/MainSection";
+import Genre from "@/components/common/TopGenre";
+import MainSection from "@/components/Home/MainSection";
 import {GENRE} from "@/constants/topList";
 
 export default function Home() {

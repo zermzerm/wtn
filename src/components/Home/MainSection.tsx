@@ -1,11 +1,11 @@
 "use client";
 
-import SwiperSection from "@/components/SwiperSection";
-import RankingCategory from "@/components/RankingCategory";
-import PlatformCategory from "@/components/PlatformCategory";
-import LeftAd from "@/components/LeftAd";
-import RightAd from "@/components/RightAd";
-import ReviewSection from "@/components/ReviewSection";
+import SwiperSection from "@/components/Home/SwiperSection";
+import RankingCategory from "@/components/Home/RankingCategory";
+import PlatformCategory from "@/components/Home/PlatformCategory";
+import LeftAd from "@/components/Home/LeftAd";
+import RightAd from "@/components/Home/RightAd";
+import ReviewSection from "@/components/common/ReviewSection";
 import styled from "styled-components";
 
 export default function MainSection() {

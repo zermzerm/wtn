@@ -1,4 +1,4 @@
-import StarRating from "@/components/StarRating";
+import StarRating from "@/components/common/StarRating";
 import {reviewTop, totalTop} from "@/lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";

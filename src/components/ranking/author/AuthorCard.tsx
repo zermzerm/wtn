@@ -1,4 +1,4 @@
-import StarRating from "@/components/StarRating";
+import StarRating from "@/components/common/StarRating";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";

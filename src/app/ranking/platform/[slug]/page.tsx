@@ -1,8 +1,8 @@
 "use client";
 
-import Card from "@/components/Card";
-import Tag from "@/components/Tag";
-import TopGenre from "@/components/TopGenre";
+import Card from "@/components/common/Card";
+import Tag from "@/components/common/Tag";
+import TopGenre from "@/components/common/TopGenre";
 import {PLATFORM, RANKING} from "@/constants/topList";
 import styled from "styled-components";
 

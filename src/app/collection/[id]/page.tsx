@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/components/Card";
+import Card from "@/components/common/Card";
 import {collectionDetails} from "@/lib/dummyData";
 import styled from "styled-components";
 

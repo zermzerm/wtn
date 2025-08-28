@@ -1,7 +1,7 @@
 "use client";
 
-import CollectionCard from "@/components/CollectionCard";
-import TopGenre from "@/components/TopGenre";
+import CollectionCard from "@/components/common/CollectionCard";
+import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
 import {collectionData} from "@/lib/dummyData";
 import styled from "styled-components";

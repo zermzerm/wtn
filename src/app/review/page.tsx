@@ -1,8 +1,8 @@
 "use client";
 
-import ReviewCard from "@/components/ReviewCard";
-import Tag from "@/components/Tag";
-import TopGenre from "@/components/TopGenre";
+import ReviewCard from "@/components/review/ReviewCard";
+import Tag from "@/components/common/Tag";
+import TopGenre from "@/components/common/TopGenre";
 import {REVIEW, TOP_REVIEW_GENRE} from "@/constants/topList";
 import {reviewData} from "@/lib/dummyData";
 import styled from "styled-components";

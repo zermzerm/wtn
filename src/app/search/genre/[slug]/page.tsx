@@ -1,7 +1,7 @@
 "use client";
 
-import Card from "@/components/Card";
-import TopGenre from "@/components/TopGenre";
+import Card from "@/components/common/Card";
+import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
 import {useParams} from "next/navigation";
 import styled from "styled-components";

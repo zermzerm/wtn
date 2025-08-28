@@ -1,8 +1,8 @@
 "use client";
 
-import AuthorCard from "@/components/AuthorCard";
-import Tag from "@/components/Tag";
-import TopGenre from "@/components/TopGenre";
+import AuthorCard from "@/components/ranking/author/AuthorCard";
+import Tag from "@/components/common/Tag";
+import TopGenre from "@/components/common/TopGenre";
 import {RANKING, WORK} from "@/constants/topList";
 import {authorWork} from "@/lib/dummyData";
 import styled from "styled-components";
