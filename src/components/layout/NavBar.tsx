@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import styled, {css, keyframes} from "styled-components";
@@ -58,8 +59,11 @@ export default function NavBar() {
         </StyledLink>
       </Section>
       <SearchSection>
-        <p>검색</p>
-        <p>로그인</p>
+        <Link href="/search/genre/total" onClick={() => setPage("search")}>
+          <Image src={"/svg/search.svg"} width={20} height={20} alt="searchBar" />
+        </Link>
+        <Link href="/accounts/login">로그인</Link>
+        <Link href="/accounts/register">회원가입</Link>
       </SearchSection>
     </Header>
   );
@@ -109,7 +113,8 @@ const SearchSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+  color: #484848;
 `;
 
 const StyledLink = styled(Link)<{$page: boolean}>`
