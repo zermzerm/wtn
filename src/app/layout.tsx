@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
-import Nav from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import Nav from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "WebToonNet",
