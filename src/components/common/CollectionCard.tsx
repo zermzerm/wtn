@@ -25,7 +25,7 @@ export default function CollectionCard({data}: CollectionCardProps) {
       </div>
       <CollectionContent>
         <Title>{data.title}</Title>
-        <Cnt>{data.cnt}개의 웹소설</Cnt>
+        <Cnt>{data.cnt}개의 웹툰</Cnt>
       </CollectionContent>
     </Link>
   );
