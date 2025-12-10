@@ -15,7 +15,7 @@ export default function TopGenre({list}: TopGenreProps) {
   const [page, setPage] = useState(list[0][0]);
   const searchParams = useSearchParams();
   const currentPage = searchParams.get("page") || list[0][0];
-
+  console.log(page);
   return (
     <Main>
       {list.map((el: string[], idx) => {
