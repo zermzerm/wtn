@@ -12,7 +12,7 @@ export default function Login() {
       <Suspense fallback={null}>
         <TopGenre list={GENRE} />
       </Suspense>
-      <Section>
+      <LoginContainer>
         <LoginForm>
           <LoginHeader>로그인</LoginHeader>
           <hr
@@ -43,12 +43,12 @@ export default function Login() {
             </LoginFooter>
           </LoginMain>
         </LoginForm>
-      </Section>
+      </LoginContainer>
     </section>
   );
 }
 
-const Section = styled.section`
+const LoginContainer = styled.section`
   padding-top: 40px;
   display: flex;
   justify-content: center;

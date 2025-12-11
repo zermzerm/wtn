@@ -2,13 +2,16 @@
 
 import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
+import {Suspense} from "react";
 import styled from "styled-components";
 
 export default function Register() {
   return (
-    <>
-      <TopGenre list={GENRE} />
-      <Section>
+    <section>
+      <Suspense fallback={null}>
+        <TopGenre list={GENRE} />
+      </Suspense>
+      <RegisterContainer>
         <LoginForm>
           <LoginHeader>회원가입</LoginHeader>
           <hr
@@ -37,12 +40,12 @@ export default function Register() {
             <LoginButton>회원가입</LoginButton>
           </LoginMain>
         </LoginForm>
-      </Section>
-    </>
+      </RegisterContainer>
+    </section>
   );
 }
 
-const Section = styled.section`
+const RegisterContainer = styled.div`
   padding-top: 40px;
   display: flex;
   justify-content: center;
@@ -57,7 +60,7 @@ const LoginForm = styled.form`
   box-shadow: 0px 0px 20px #c2c2c2;
 `;
 
-const LoginHeader = styled.div`
+const LoginHeader = styled.h1`
   font-size: 19px;
   color: #1f1f1f;
   padding: 25px 28px;

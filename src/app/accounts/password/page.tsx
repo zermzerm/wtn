@@ -11,7 +11,7 @@ export default function Password() {
       <Suspense fallback={null}>
         <TopGenre list={GENRE} />
       </Suspense>
-      <Section>
+      <PasswordContainer>
         <LoginForm>
           <LoginHeader>비밀번호 재설정</LoginHeader>
           <hr
@@ -33,12 +33,12 @@ export default function Password() {
             <p>소셜 계정으로 가입하셨을 때는 해당 SNS의 이메일을 입력해주세요.</p>
           </LoginFooter>
         </LoginForm>
-      </Section>
+      </PasswordContainer>
     </section>
   );
 }
 
-const Section = styled.div`
+const PasswordContainer = styled.div`
   padding-top: 40px;
   display: flex;
   justify-content: center;
