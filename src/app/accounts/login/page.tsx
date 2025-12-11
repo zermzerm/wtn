@@ -3,12 +3,15 @@
 import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
 import Link from "next/link";
+import {Suspense} from "react";
 import styled from "styled-components";
 
 export default function Login() {
   return (
-    <>
-      <TopGenre list={GENRE} />
+    <section>
+      <Suspense fallback={null}>
+        <TopGenre list={GENRE} />
+      </Suspense>
       <Section>
         <LoginForm>
           <LoginHeader>로그인</LoginHeader>
@@ -41,7 +44,7 @@ export default function Login() {
           </LoginMain>
         </LoginForm>
       </Section>
-    </>
+    </section>
   );
 }
 
@@ -60,7 +63,7 @@ const LoginForm = styled.form`
   box-shadow: 0px 0px 20px #c2c2c2;
 `;
 
-const LoginHeader = styled.div`
+const LoginHeader = styled.h1`
   font-size: 19px;
   color: #1f1f1f;
   padding: 25px 28px;
