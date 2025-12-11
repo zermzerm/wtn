@@ -2,12 +2,15 @@
 
 import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
+import {Suspense} from "react";
 import styled from "styled-components";
 
 export default function Password() {
   return (
-    <>
-      <TopGenre list={GENRE} />
+    <section>
+      <Suspense fallback={null}>
+        <TopGenre list={GENRE} />
+      </Suspense>
       <Section>
         <LoginForm>
           <LoginHeader>비밀번호 재설정</LoginHeader>
@@ -31,11 +34,11 @@ export default function Password() {
           </LoginFooter>
         </LoginForm>
       </Section>
-    </>
+    </section>
   );
 }
 
-const Section = styled.section`
+const Section = styled.div`
   padding-top: 40px;
   display: flex;
   justify-content: center;
@@ -50,7 +53,7 @@ const LoginForm = styled.form`
   box-shadow: 0px 0px 20px #c2c2c2;
 `;
 
-const LoginHeader = styled.div`
+const LoginHeader = styled.h1`
   font-size: 19px;
   color: #1f1f1f;
   padding: 25px 28px;
