@@ -2,15 +2,12 @@
 
 import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
-import {Suspense} from "react";
 import styled from "styled-components";
 
 export default function Register() {
   return (
     <section>
-      <Suspense fallback={null}>
-        <TopGenre list={GENRE} />
-      </Suspense>
+      <TopGenre list={GENRE} />
       <RegisterContainer>
         <LoginForm>
           <LoginHeader>회원가입</LoginHeader>

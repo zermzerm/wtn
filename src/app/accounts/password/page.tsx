@@ -2,15 +2,12 @@
 
 import TopGenre from "@/components/common/TopGenre";
 import {GENRE} from "@/constants/topList";
-import {Suspense} from "react";
 import styled from "styled-components";
 
 export default function Password() {
   return (
     <section>
-      <Suspense fallback={null}>
-        <TopGenre list={GENRE} />
-      </Suspense>
+      <TopGenre list={GENRE} />
       <PasswordContainer>
         <LoginForm>
           <LoginHeader>비밀번호 재설정</LoginHeader>

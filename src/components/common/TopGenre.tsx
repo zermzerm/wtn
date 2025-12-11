@@ -3,7 +3,7 @@
 import {GENRE, RANKING, REVIEW} from "@/constants/topList";
 import Link from "next/link";
 import {useSearchParams} from "next/navigation";
-import {useState} from "react";
+import {Suspense, useState} from "react";
 import styled from "styled-components";
 
 interface TopGenreProps {
@@ -17,29 +17,31 @@ export default function TopGenre({list}: TopGenreProps) {
   const currentPage = searchParams.get("page") || list[0][0];
   console.log(page);
   return (
-    <Main>
-      {list.map((el: string[], idx) => {
-        // console.log(page, el[0]);
-        return (
-          <Article
-            href={
-              genre
-                ? `/search/genre/${el[1]}?page=${el[0]}`
-                : list === RANKING
-                ? `/ranking/${el[1]}?page=${el[0]}`
-                : list === REVIEW
-                ? `/review/${el[1]}?page=${el[0]}`
-                : `/community/topics/${el[1]}?page=${el[0]}`
-            }
-            key={idx}
-            onClick={() => setPage(el[0])}
-            $page={currentPage === el[0]}
-          >
-            {el[0]}
-          </Article>
-        );
-      })}
-    </Main>
+    <Suspense fallback={null}>
+      <Main>
+        {list.map((el: string[], idx) => {
+          // console.log(page, el[0]);
+          return (
+            <Article
+              href={
+                genre
+                  ? `/search/genre/${el[1]}?page=${el[0]}`
+                  : list === RANKING
+                  ? `/ranking/${el[1]}?page=${el[0]}`
+                  : list === REVIEW
+                  ? `/review/${el[1]}?page=${el[0]}`
+                  : `/community/topics/${el[1]}?page=${el[0]}`
+              }
+              key={idx}
+              onClick={() => setPage(el[0])}
+              $page={currentPage === el[0]}
+            >
+              {el[0]}
+            </Article>
+          );
+        })}
+      </Main>
+    </Suspense>
   );
 }
 
