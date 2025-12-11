@@ -282,7 +282,7 @@ export const totalTop = [
     author: "UMI",
     star: 4.5,
     review: 5432,
-    img: "/images/전지적독자시점.PNG",
+    img: "/images/전지적독자시점.png",
   },
   {
     id: 2,
@@ -291,7 +291,7 @@ export const totalTop = [
     author: "조석",
     star: 4.4,
     review: 4321,
-    img: "/images/마음의 소리.PNG",
+    img: "/images/마음의 소리.png",
   },
   {
     id: 3,
@@ -300,7 +300,7 @@ export const totalTop = [
     author: "JP",
     star: 4.3,
     review: 3215,
-    img: "/images/재벌집막내.PNG",
+    img: "/images/재벌집막내.png",
   },
   {
     id: 4,
@@ -309,7 +309,7 @@ export const totalTop = [
     author: "SIU",
     star: 4.2,
     review: 2154,
-    img: "/images/우렉마지노.PNG",
+    img: "/images/우렉마지노.png",
   },
   {
     id: 5,
@@ -318,7 +318,7 @@ export const totalTop = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
 ];
 
@@ -330,7 +330,7 @@ export const reviewTop = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 2,
@@ -339,7 +339,7 @@ export const reviewTop = [
     author: "SIU",
     star: 4.2,
     review: 2154,
-    img: "/images/우렉마지노.PNG",
+    img: "/images/우렉마지노.png",
   },
   {
     id: 3,
@@ -348,7 +348,7 @@ export const reviewTop = [
     author: "JP",
     star: 4.3,
     review: 3215,
-    img: "/images/재벌집막내.PNG",
+    img: "/images/재벌집막내.png",
   },
   {
     id: 4,
@@ -357,7 +357,7 @@ export const reviewTop = [
     author: "조석",
     star: 4.4,
     review: 4321,
-    img: "/images/마음의 소리.PNG",
+    img: "/images/마음의 소리.png",
   },
   {
     id: 5,
@@ -366,7 +366,7 @@ export const reviewTop = [
     author: "UMI",
     star: 4.5,
     review: 5432,
-    img: "/images/전지적독자시점.PNG",
+    img: "/images/전지적독자시점.png",
   },
 ];
 
@@ -421,7 +421,7 @@ export const totalWebToon = [
     author: "UMI",
     star: 4.5,
     review: 5432,
-    img: "/images/전지적독자시점.PNG",
+    img: "/images/전지적독자시점.png",
   },
   {
     id: 2,
@@ -430,7 +430,7 @@ export const totalWebToon = [
     author: "조석",
     star: 4.4,
     review: 4321,
-    img: "/images/마음의 소리.PNG",
+    img: "/images/마음의 소리.png",
   },
   {
     id: 3,
@@ -439,7 +439,7 @@ export const totalWebToon = [
     author: "JP",
     star: 4.3,
     review: 3215,
-    img: "/images/재벌집막내.PNG",
+    img: "/images/재벌집막내.png",
   },
   {
     id: 4,
@@ -448,7 +448,7 @@ export const totalWebToon = [
     author: "SIU",
     star: 4.2,
     review: 2154,
-    img: "/images/우렉마지노.PNG",
+    img: "/images/우렉마지노.png",
   },
   {
     id: 5,
@@ -457,7 +457,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 6,
@@ -466,7 +466,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 7,
@@ -475,7 +475,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 8,
@@ -484,7 +484,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 9,
@@ -493,7 +493,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 10,
@@ -502,7 +502,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 11,
@@ -511,7 +511,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 12,
@@ -520,7 +520,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 13,
@@ -529,7 +529,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 14,
@@ -538,7 +538,7 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
   {
     id: 15,
@@ -547,14 +547,14 @@ export const totalWebToon = [
     author: "이상규",
     star: 4.1,
     review: 1543,
-    img: "/images/호랑이형님.PNG",
+    img: "/images/호랑이형님.png",
   },
 ];
 
 export const series = {
   id: 1,
   title: "마음의 소리",
-  img: "/images/마음의 소리.PNG",
+  img: "/images/마음의 소리.png",
   genre: "개그",
   author: "조석",
   status: "완결",
