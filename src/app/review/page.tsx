@@ -2,15 +2,15 @@
 
 import ReviewCard from "@/components/review/ReviewCard";
 import Tag from "@/components/common/Tag";
-import TopGenre from "@/components/common/TopGenre";
 import {REVIEW, TOP_REVIEW_GENRE} from "@/constants/topList";
 import {reviewData} from "@/lib/dummyData";
 import styled from "styled-components";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 
 export default function Review() {
   return (
     <div>
-      <TopGenre list={REVIEW} />
+      <TopGenreWrapper list={REVIEW} />
       <Main>
         <Header>
           <H>최신리뷰</H>

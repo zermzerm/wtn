@@ -1,13 +1,13 @@
 "use client";
 
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
 import styled from "styled-components";
 
 export default function Password() {
   return (
     <section>
-      <TopGenre list={GENRE} />
+      <TopGenreWrapper list={GENRE} />
       <PasswordContainer>
         <LoginForm>
           <LoginHeader>비밀번호 재설정</LoginHeader>

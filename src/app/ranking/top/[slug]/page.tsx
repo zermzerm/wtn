@@ -2,14 +2,14 @@
 
 import Card from "@/components/common/Card";
 import Tag from "@/components/common/Tag";
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {RANKING, TOP_GENRE, TOTAL, YEARS} from "@/constants/topList";
 import styled from "styled-components";
 
 export default function Top() {
   return (
     <>
-      <TopGenre list={RANKING} />
+      <TopGenreWrapper list={RANKING} />
       <Main>
         <Header>
           <h2>TOP 30</h2>

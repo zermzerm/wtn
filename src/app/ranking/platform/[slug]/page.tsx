@@ -2,14 +2,14 @@
 
 import Card from "@/components/common/Card";
 import Tag from "@/components/common/Tag";
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {PLATFORM, RANKING} from "@/constants/topList";
 import styled from "styled-components";
 
 export default function Platform() {
   return (
     <>
-      <TopGenre list={RANKING} />
+      <TopGenreWrapper list={RANKING} />
       <Main>
         <Header>
           <H>플랫폼 BEST</H>

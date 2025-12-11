@@ -1,7 +1,7 @@
 "use client";
 
 import CollectionCard from "@/components/common/CollectionCard";
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
 import {collectionData} from "@/lib/dummyData";
 import styled from "styled-components";
@@ -9,7 +9,7 @@ import styled from "styled-components";
 export default function Collection() {
   return (
     <div>
-      <TopGenre list={GENRE} />
+      <TopGenreWrapper list={GENRE} />
       <Main>
         <Header>
           <H>타이틀</H>

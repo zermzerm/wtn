@@ -1,17 +1,14 @@
 "use client";
 
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
 import Link from "next/link";
-import {Suspense} from "react";
 import styled from "styled-components";
 
 export default function Login() {
   return (
     <section>
-      <Suspense fallback={null}>
-        <TopGenre list={GENRE} />
-      </Suspense>
+      <TopGenreWrapper list={GENRE} />
       <LoginContainer>
         <LoginForm>
           <LoginHeader>로그인</LoginHeader>

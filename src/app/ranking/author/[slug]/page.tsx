@@ -2,15 +2,15 @@
 
 import AuthorCard from "@/components/ranking/author/AuthorCard";
 import Tag from "@/components/common/Tag";
-import TopGenre from "@/components/common/TopGenre";
 import {RANKING, WORK} from "@/constants/topList";
 import {authorWork} from "@/lib/dummyData";
 import styled from "styled-components";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 
 export default function Author() {
   return (
     <>
-      <TopGenre list={RANKING} />
+      <TopGenreWrapper list={RANKING} />
       <Main>
         <Header>
           <H>작가 BEST</H>

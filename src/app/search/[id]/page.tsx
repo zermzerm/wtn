@@ -1,7 +1,7 @@
 "use client";
 
 import StarRating from "@/components/common/StarRating";
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
 import {series} from "@/lib/dummyData";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import styled from "styled-components";
 export default function Series() {
   return (
     <>
-      <TopGenre list={GENRE} />
+      <TopGenreWrapper list={GENRE} />
       <Main>
         <Content>
           <div>

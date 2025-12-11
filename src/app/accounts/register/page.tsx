@@ -1,13 +1,13 @@
 "use client";
 
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
 import styled from "styled-components";
 
 export default function Register() {
   return (
     <section>
-      <TopGenre list={GENRE} />
+      <TopGenreWrapper list={GENRE} />
       <RegisterContainer>
         <LoginForm>
           <LoginHeader>회원가입</LoginHeader>

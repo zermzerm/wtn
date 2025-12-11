@@ -1,6 +1,6 @@
 "use client";
 
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import PostCard from "@/components/community/PostCard";
 import {COMMUNITY} from "@/constants/topList";
 import {POST} from "@/lib/dummyData";
@@ -13,7 +13,7 @@ export default function Community() {
   const title = COMMUNITY.filter((el) => el[1] === slug)[0][0];
   return (
     <>
-      <TopGenre list={COMMUNITY} />
+      <TopGenreWrapper list={COMMUNITY} />
       <Main>
         <Header>
           <H>{title}</H>

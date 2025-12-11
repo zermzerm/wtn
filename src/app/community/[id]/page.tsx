@@ -1,6 +1,6 @@
 "use client";
 
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {COMMUNITY} from "@/constants/topList";
 import {POST} from "@/lib/dummyData";
 import styled from "styled-components";
@@ -10,7 +10,7 @@ export default function Post() {
 
   return (
     <>
-      <TopGenre list={COMMUNITY} />
+      <TopGenreWrapper list={COMMUNITY} />
       <Main>
         <Header>
           <H>{postData.postType}</H>

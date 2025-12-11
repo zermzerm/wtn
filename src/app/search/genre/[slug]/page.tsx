@@ -1,7 +1,7 @@
 "use client";
 
 import Card from "@/components/common/Card";
-import TopGenre from "@/components/common/TopGenre";
+import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
 import {useParams} from "next/navigation";
 import styled from "styled-components";
@@ -12,7 +12,7 @@ export default function GenrePage() {
   const title = GENRE.filter((el) => el[1] === slug)[0][0];
   return (
     <>
-      <TopGenre list={GENRE} />
+      <TopGenreWrapper list={GENRE} />
       <Main>
         <Header>
           <H>{title}</H>
