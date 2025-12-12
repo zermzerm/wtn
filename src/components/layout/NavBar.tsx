@@ -4,10 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import styled, {css, keyframes} from "styled-components";
+import {useAuthStore} from "../../../store/authStore";
 
 export default function NavBar() {
   const [isHidden, setIsHidden] = useState(false);
   const [page, setPage] = useState("");
+
+  const {user, loading, logout} = useAuthStore();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,8 +65,17 @@ export default function NavBar() {
         <Link href="/search/genre/total" onClick={() => setPage("search")}>
           <Image src={"/svg/search.svg"} width={20} height={20} alt="searchBar" />
         </Link>
-        <Link href="/accounts/login">로그인</Link>
-        <Link href="/accounts/register">회원가입</Link>
+        {!loading && user ? (
+          <>
+            <span>{user.email}</span>
+            <button onClick={logout}>로그아웃</button>
+          </>
+        ) : (
+          <>
+            <Link href="/accounts/login">로그인</Link>
+            <Link href="/accounts/register">회원가입</Link>
+          </>
+        )}
       </SearchSection>
     </Header>
   );

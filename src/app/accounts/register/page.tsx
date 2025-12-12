@@ -19,7 +19,6 @@ export default function Register() {
 
   const handleRegister = async (e: FormEvent) => {
     e.preventDefault();
-
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await setDoc(doc(db, "users", userCredential.user.uid), {
