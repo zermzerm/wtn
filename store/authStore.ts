@@ -1,4 +1,5 @@
-// store/authStore.ts
+"use client";
+
 import {create} from "zustand";
 import {onAuthStateChanged, signOut} from "firebase/auth";
 import {auth} from "../lib/firebase";
