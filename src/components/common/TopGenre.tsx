@@ -3,7 +3,7 @@
 import {GENRE, RANKING, REVIEW} from "@/constants/topList";
 import Link from "next/link";
 import {useSearchParams} from "next/navigation";
-import {useState} from "react";
+// import {useState} from "react";
 import styled from "styled-components";
 
 interface TopGenreProps {
@@ -12,10 +12,9 @@ interface TopGenreProps {
 
 export default function TopGenre({list}: TopGenreProps) {
   const genre = JSON.stringify(list) === JSON.stringify(GENRE);
-  const [page, setPage] = useState(list[0][0]);
+  // const [page, setPage] = useState(list[0][0]);
   const searchParams = useSearchParams();
   const currentPage = searchParams.get("page") || list[0][0];
-  console.log(page);
   return (
     <Main>
       {list.map((el: string[], idx) => {
@@ -32,7 +31,7 @@ export default function TopGenre({list}: TopGenreProps) {
                 : `/community/topics/${el[1]}?page=${el[0]}`
             }
             key={idx}
-            onClick={() => setPage(el[0])}
+            // onClick={() => setPage(el[0])}
             $page={currentPage === el[0]}
           >
             {el[0]}

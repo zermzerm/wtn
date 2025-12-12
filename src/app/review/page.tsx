@@ -3,7 +3,7 @@
 import ReviewCard from "@/components/review/ReviewCard";
 import Tag from "@/components/common/Tag";
 import {REVIEW, TOP_REVIEW_GENRE} from "@/constants/topList";
-import {reviewData} from "@/lib/dummyData";
+import {reviewData} from "../../../lib/dummyData";
 import styled from "styled-components";
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 

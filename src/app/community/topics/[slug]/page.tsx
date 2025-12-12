@@ -3,7 +3,7 @@
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import PostCard from "@/components/community/PostCard";
 import {COMMUNITY} from "@/constants/topList";
-import {POST} from "@/lib/dummyData";
+import {POST} from "../../../../../lib/dummyData";
 import {useParams} from "next/navigation";
 import styled from "styled-components";
 

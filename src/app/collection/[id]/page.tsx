@@ -1,7 +1,7 @@
 "use client";
 
 import Card from "@/components/common/Card";
-import {collectionDetails} from "@/lib/dummyData";
+import {collectionDetails} from "../../../../lib/dummyData";
 import styled from "styled-components";
 
 export default function CollectionSeries() {

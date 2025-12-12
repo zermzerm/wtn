@@ -1,6 +1,6 @@
 "use client";
 
-import {swiperDummy} from "@/lib/dummyData";
+import {swiperDummy} from "../../../lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
 import {Swiper, SwiperSlide} from "swiper/react";

@@ -3,7 +3,7 @@
 import AuthorCard from "@/components/ranking/author/AuthorCard";
 import Tag from "@/components/common/Tag";
 import {RANKING, WORK} from "@/constants/topList";
-import {authorWork} from "@/lib/dummyData";
+import {authorWork} from "../../../../../lib/dummyData";
 import styled from "styled-components";
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 

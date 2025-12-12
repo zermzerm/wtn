@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {totalWebToon} from "@/lib/dummyData";
+import {totalWebToon} from "../../../lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";
 import StarRating from "@/components/common/StarRating";

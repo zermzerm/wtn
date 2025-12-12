@@ -3,7 +3,7 @@
 import StarRating from "@/components/common/StarRating";
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
-import {series} from "@/lib/dummyData";
+import {series} from "../../../../lib/dummyData";
 import Image from "next/image";
 import styled from "styled-components";
 

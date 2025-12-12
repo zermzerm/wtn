@@ -2,14 +2,51 @@
 
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import {doc, setDoc} from "firebase/firestore";
+import {FormEvent, useEffect, useState} from "react";
 import styled from "styled-components";
+import {auth, db} from "../../../../lib/firebase";
+import {FirebaseError} from "firebase/app";
+import {useRouter} from "next/navigation";
 
 export default function Register() {
+  const [email, setEmail] = useState("");
+  const [nickname, setNickname] = useState("");
+  const [password, setPassword] = useState("");
+
+  const router = useRouter();
+
+  const handleRegister = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await setDoc(doc(db, "users", userCredential.user.uid), {
+        email,
+        nickname,
+      });
+      alert("회원가입 완료!");
+      router.push("/");
+    } catch (error) {
+      if (error instanceof FirebaseError) {
+        alert(error.message); // Firebase 에러 메시지 제공
+        console.log("error.code:", error.code);
+      } else {
+        console.error(error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    console.log("apiKey:", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+  }, []);
+
   return (
     <section>
       <TopGenreWrapper list={GENRE} />
       <RegisterContainer>
-        <LoginForm>
+        <LoginForm onSubmit={handleRegister}>
           <LoginHeader>회원가입</LoginHeader>
           <hr
             style={{
@@ -20,21 +57,35 @@ export default function Register() {
           <LoginMain>
             <InputWrapper>
               <InputLabel>이메일 주소 *</InputLabel>
-              <LoginInput />
+              <LoginInput
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="이메일"
+              />
             </InputWrapper>
             <InputWrapper>
               <InputLabel>닉네임 *</InputLabel>
-              <LoginInput />
+              <LoginInput
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+                placeholder="닉네임"
+              />
             </InputWrapper>
             <InputWrapper>
               <InputLabel>비밀번호 *</InputLabel>
-              <LoginInput />
+              <LoginInput
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="비밀번호"
+              />
             </InputWrapper>
-            <InputWrapper>
+            {/* <InputWrapper>
               <InputLabel>비밀번호 확인 *</InputLabel>
-              <LoginInput />
-            </InputWrapper>
-            <LoginButton>회원가입</LoginButton>
+              <LoginInput value={password} placeholder="비밀번호 확인" />
+            </InputWrapper> */}
+            <LoginButton type="submit">회원가입</LoginButton>
           </LoginMain>
         </LoginForm>
       </RegisterContainer>
@@ -96,6 +147,7 @@ const LoginInput = styled.input`
 `;
 
 const LoginButton = styled.button`
+  cursor: pointer;
   box-sizing: border-box;
   width: 100%;
   background-color: #23d2e2;

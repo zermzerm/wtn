@@ -2,7 +2,7 @@
 
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {COMMUNITY} from "@/constants/topList";
-import {POST} from "@/lib/dummyData";
+import {POST} from "../../../../lib/dummyData";
 import styled from "styled-components";
 
 export default function Post() {

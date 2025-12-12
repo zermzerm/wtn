@@ -1,5 +1,5 @@
 import StarRating from "@/components/common/StarRating";
-import {reviewTop, totalTop} from "@/lib/dummyData";
+import {reviewTop, totalTop} from "../../../lib/dummyData";
 import Image from "next/image";
 import Link from "next/link";
 import {useState} from "react";
