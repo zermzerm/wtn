@@ -2,15 +2,42 @@
 
 import TopGenreWrapper from "@/components/common/TopGenreWrapper";
 import {GENRE} from "@/constants/topList";
+import {signInWithEmailAndPassword} from "firebase/auth";
 import Link from "next/link";
+import {useState} from "react";
 import styled from "styled-components";
+import {auth} from "../../../../lib/firebase";
+import {FirebaseError} from "firebase/app";
+import {useRouter} from "next/navigation";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const router = useRouter();
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      alert("로그인 성공");
+      router.push("/");
+    } catch (error) {
+      if (error instanceof FirebaseError) {
+        alert(error.message); // Firebase 에러 메시지 제공
+        console.log("error.code:", error.code);
+      } else {
+        console.error(error);
+      }
+    }
+  };
+
   return (
     <section>
       <TopGenreWrapper list={GENRE} />
       <LoginContainer>
-        <LoginForm>
+        <LoginForm onSubmit={handleLogin}>
           <LoginHeader>로그인</LoginHeader>
           <hr
             style={{
@@ -21,13 +48,21 @@ export default function Login() {
           <LoginMain>
             <InputWrapper>
               <InputLabel>이메일 주소 *</InputLabel>
-              <LoginInput />
+              <LoginInput
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="이메일"
+              />
             </InputWrapper>
             <InputWrapper>
               <InputLabel>비밀번호 *</InputLabel>
-              <LoginInput />
+              <LoginInput
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="비밀번호"
+              />
             </InputWrapper>
-            <LoginButton>로그인</LoginButton>
+            <LoginButton type="submit">로그인</LoginButton>
             <LoginFooter>
               <p>
                 계정이 없으신가요? <RegisterLink href="/accounts/register">회원가입</RegisterLink>을
