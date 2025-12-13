@@ -1,28 +1,18 @@
 "use client";
 
 import {create} from "zustand";
-import {onAuthStateChanged, signOut} from "firebase/auth";
-import {auth} from "../lib/firebase";
-import type {User} from "firebase/auth";
+import {User} from "firebase/auth";
 
-interface UserState {
+interface AuthState {
   user: User | null;
   loading: boolean;
-  logout: () => Promise<void>;
+  setUser: (user: User | null) => void;
+  setLoading: (loading: boolean) => void;
 }
 
-export const useAuthStore = create<UserState>((set) => ({
+export const useAuthStore = create<AuthState>((set) => ({
   user: null,
   loading: true,
-  logout: async () => {
-    await signOut(auth);
-    set({user: null});
-  },
+  setUser: (user) => set({user}),
+  setLoading: (loading) => set({loading}),
 }));
-
-onAuthStateChanged(auth, (currentUser) => {
-  useAuthStore.setState({
-    user: currentUser,
-    loading: false,
-  });
-});
