@@ -4,21 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import styled, {css, keyframes} from "styled-components";
+import {useAuth} from "@/providers/AuthContext";
 import {useAuthStore} from "../../../store/authStore";
 
 export default function NavBar() {
   const [isHidden, setIsHidden] = useState(false);
   const [page, setPage] = useState("");
 
-  const {user, loading, logout} = useAuthStore();
+  const {user, loading} = useAuthStore();
+  const {logout} = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-
       if (scrollY === 0) setIsHidden(false);
       else if (scrollY > 400) setIsHidden(true);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -61,10 +63,12 @@ export default function NavBar() {
           커뮤니티
         </StyledLink>
       </Section>
+
       <SearchSection>
-        <Link href="/search/genre/total" onClick={() => setPage("search")}>
-          <Image src={"/svg/search.svg"} width={20} height={20} alt="searchBar" />
+        <Link href="/search/genre/total">
+          <Image src="/svg/search.svg" width={20} height={20} alt="search" />
         </Link>
+
         {!loading && user ? (
           <>
             <span>{user.email}</span>

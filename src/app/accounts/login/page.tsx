@@ -6,9 +6,9 @@ import {signInWithEmailAndPassword} from "firebase/auth";
 import Link from "next/link";
 import {useState} from "react";
 import styled from "styled-components";
-import {auth} from "../../../../lib/firebase";
 import {FirebaseError} from "firebase/app";
 import {useRouter} from "next/navigation";
+import {auth} from "@/firebase/client";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ export default function Login() {
       router.push("/");
     } catch (error) {
       if (error instanceof FirebaseError) {
-        alert(error.message); // Firebase 에러 메시지 제공
+        alert(error.message);
         console.log("error.code:", error.code);
       } else {
         console.error(error);
