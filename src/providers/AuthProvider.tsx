@@ -1,9 +1,10 @@
 "use client";
 
 import {useEffect} from "react";
-import {onAuthStateChanged} from "firebase/auth";
+import {onAuthStateChanged, signOut} from "firebase/auth";
 import {getFirebaseAuth} from "@/firebase/client";
 import {useAuthStore} from "../../store/authStore";
+import {AuthContext} from "./AuthContext";
 
 export default function AuthProvider({children}: {children: React.ReactNode}) {
   const {setUser, setLoading} = useAuthStore();
@@ -16,7 +17,12 @@ export default function AuthProvider({children}: {children: React.ReactNode}) {
     });
 
     return unsub;
-  }, []);
+  }, [setUser, setLoading]);
 
-  return <>{children}</>;
+  const logout = async () => {
+    const auth = getFirebaseAuth();
+    await signOut(auth);
+  };
+
+  return <AuthContext.Provider value={{logout}}>{children}</AuthContext.Provider>;
 }

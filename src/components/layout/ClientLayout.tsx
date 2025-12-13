@@ -1,12 +1,12 @@
 "use client";
 
-import Nav from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
+import NavBar from "@/components/layout/NavBar";
 
 export default function ClientLayout({children}: {children: React.ReactNode}) {
   return (
     <>
-      <Nav />
+      <NavBar />
       <div style={{paddingTop: "80px"}}>{children}</div>
       <Footer />
     </>

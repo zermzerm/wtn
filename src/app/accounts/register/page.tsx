@@ -8,7 +8,7 @@ import {FormEvent, useState} from "react";
 import styled from "styled-components";
 import {FirebaseError} from "firebase/app";
 import {useRouter} from "next/navigation";
-import {auth, db} from "@/firebase/client";
+import {getFirebaseAuth, getFirebaseDB} from "@/firebase/client";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -21,6 +21,9 @@ export default function Register() {
     e.preventDefault();
 
     try {
+      const auth = getFirebaseAuth();
+      const db = getFirebaseDB();
+
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
       await setDoc(doc(db, "users", userCredential.user.uid), {

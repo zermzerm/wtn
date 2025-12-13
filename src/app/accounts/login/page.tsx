@@ -8,7 +8,7 @@ import {useState} from "react";
 import styled from "styled-components";
 import {FirebaseError} from "firebase/app";
 import {useRouter} from "next/navigation";
-import {auth} from "@/firebase/client";
+import {getFirebaseAuth} from "@/firebase/client";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -20,6 +20,8 @@ export default function Login() {
     e.preventDefault();
 
     try {
+      const auth = getFirebaseAuth();
+
       await signInWithEmailAndPassword(auth, email, password);
       alert("로그인 성공");
       router.push("/");
