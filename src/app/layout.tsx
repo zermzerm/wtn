@@ -1,27 +1,17 @@
 import type {Metadata} from "next";
 import "./globals.css";
-import Nav from "@/components/layout/NavBar";
-import Footer from "@/components/layout/Footer";
+import ClientProviders from "@/components/ClientProviders";
 
 export const metadata: Metadata = {
   title: "WebToonNet",
   description: "WebToon Review Site",
-  // icons: {
-  //   icon: "./favicon.ico",
-  // },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="ko">
       <body>
-        <Nav />
-        <div style={{paddingTop: "80px"}}>{children}</div>
-        <Footer />
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );

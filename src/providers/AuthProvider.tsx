@@ -1,4 +1,3 @@
-// src/providers/AuthProvider.tsx
 "use client";
 
 import {onAuthStateChanged, signOut} from "firebase/auth";
