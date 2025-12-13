@@ -11,7 +11,7 @@ export default function NavBar() {
   const [isHidden, setIsHidden] = useState(false);
   const [page, setPage] = useState("");
 
-  const {user, loading} = useAuthStore();
+  const {user, nickname, loading} = useAuthStore();
   const {logout} = useAuth();
 
   useEffect(() => {
@@ -70,14 +70,15 @@ export default function NavBar() {
         </Link>
 
         {!loading && user ? (
-          <>
-            <span>{user.email}</span>
-            <button onClick={logout}>로그아웃</button>
-          </>
+          <ProfileDiv>
+            <Image src="/svg/profile.png" width={30} height={30} alt="프로필이미지" />
+            <span>{nickname} 회원님</span>
+            <StyledAccountButton onClick={logout}>로그아웃</StyledAccountButton>
+          </ProfileDiv>
         ) : (
           <>
-            <Link href="/accounts/login">로그인</Link>
-            <Link href="/accounts/register">회원가입</Link>
+            <StyledAccountLink href="/accounts/login">로그인</StyledAccountLink>
+            <StyledAccountLink href="/accounts/register">회원가입</StyledAccountLink>
           </>
         )}
       </SearchSection>
@@ -139,6 +140,27 @@ const StyledLink = styled(Link)<{$page: boolean}>`
   text-decoration: none;
   color: ${({$page}) => ($page ? " #23d2e2" : "#000")};
 
+  &:hover {
+    color: #23d2e2;
+  }
+`;
+
+const ProfileDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`;
+
+const StyledAccountLink = styled(Link)`
+  font-size: 18px;
+  &:hover {
+    color: #23d2e2;
+  }
+`;
+
+const StyledAccountButton = styled.button`
+  font-size: 18px;
   &:hover {
     color: #23d2e2;
   }
