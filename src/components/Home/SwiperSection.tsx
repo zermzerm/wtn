@@ -85,8 +85,6 @@ const CustomButton = styled.button`
   font-size: 20px;
   color: #444;
   background-color: #f8f8fb;
-  border: none;
-  cursor: pointer;
   transition: all 0.2s;
 
   &:hover {

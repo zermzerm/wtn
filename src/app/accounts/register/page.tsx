@@ -146,11 +146,9 @@ const LoginInput = styled.input`
 `;
 
 const LoginButton = styled.button`
-  cursor: pointer;
   box-sizing: border-box;
   width: 100%;
   background-color: #23d2e2;
-  border: none;
   border-radius: 12px;
   padding: 12px 18px;
   color: #ffffff;
