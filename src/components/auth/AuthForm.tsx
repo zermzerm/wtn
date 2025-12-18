@@ -82,7 +82,6 @@ export default function AuthForm({type}: AuthFormProps) {
       <hr style={{border: "none", borderTop: "1px solid #e9e7e7"}} />
 
       <LoginMain>
-        {/* 이메일 */}
         <InputWrapper>
           <InputLabel>이메일 주소 *</InputLabel>
           <LoginInput

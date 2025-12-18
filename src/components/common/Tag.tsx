@@ -35,9 +35,9 @@ const Div = styled.div`
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0; /* 글자 아래쪽에 위치 */
+    bottom: 0;
     width: 100%;
-    height: 3px; /* 밑줄 두께 */
+    height: 3px;
     background: #23d2e2;
     transform: translateY(8px) scaleY(0); /* 처음엔 보이지 않음 (세로축 0) */
     transform-origin: bottom; /* 밑에서 시작 */
